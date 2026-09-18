@@ -191,7 +191,7 @@ export function NextSteps() {
               <a
                 href={interstitial.href}
                 rel="noopener"
-                className="btn flex shrink-0 items-center gap-[18px] overflow-hidden rounded-[999px] bg-[#28328c] py-[10px] pl-[26px] pr-[10px] text-[17px] font-semibold leading-[1.55] text-white"
+                className="btn btn-primary flex shrink-0 items-center gap-[18px] overflow-hidden rounded-[999px] bg-[#28328c] py-[10px] pl-[26px] pr-[10px] text-[17px] font-semibold leading-[1.55] text-white"
               >
                 {interstitial.go}
                 <ArrowChip />

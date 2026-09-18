@@ -234,6 +234,11 @@
   .btn:active:not(:disabled) {
     transform: scale(0.97);
   }
+  /* Figma: chip is cyan on navy buttons, navy on white buttons */
+  .btn-primary {
+    --chip-arrow-bg: #14bef0;
+    --chip-arrow-fg: #0b1140;
+  }
   .chip {
     transition: background-color 200ms var(--ease), color 200ms var(--ease);
   }

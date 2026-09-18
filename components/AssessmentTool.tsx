@@ -43,7 +43,7 @@ type Answers = Record<string, string>;
 type Stage = 'intro' | 'questions' | 'summary';
 
 const PILL_PRIMARY =
-  'btn flex shrink-0 items-center gap-[14px] overflow-hidden rounded-[999px] bg-[#28328c] py-[10px] pl-[22px] pr-[10px] font-semibold leading-[1.55] text-white';
+  'btn btn-primary flex shrink-0 items-center gap-[14px] overflow-hidden rounded-[999px] bg-[#28328c] py-[10px] pl-[22px] pr-[10px] font-semibold leading-[1.55] text-white';
 const PILL_OUTLINE =
   'btn btn-outline flex shrink-0 items-center rounded-[999px] border-[1.5px] border-solid border-[#28328c] px-[22px] py-[10px] text-[16px] font-semibold leading-[1.55] text-[#28328c] disabled:opacity-40';
 

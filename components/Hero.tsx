@@ -49,7 +49,7 @@ export function Hero() {
           <div className="flex flex-wrap items-center gap-4">
             <a
               href="#understand"
-              className="btn flex items-center gap-[18px] rounded-full bg-[#28328C] py-2.5 pl-[26px] pr-2.5 text-[18px] font-semibold text-white"
+              className="btn btn-primary flex items-center gap-[18px] rounded-full bg-[#28328C] py-2.5 pl-[26px] pr-2.5 text-[18px] font-semibold text-white"
             >
               {screen1.primaryCta}
               <ArrowChip />
