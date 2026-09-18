@@ -1,0 +1,9 @@
+node_modules/
+.next/
+out/
+_to_delete/
+assets-src/
+.DS_Store
+*.log
+.env*
+tsconfig.tsbuildinfo
