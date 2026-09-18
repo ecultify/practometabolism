@@ -206,3 +206,98 @@
     }
   }
 }
+
+/* ============================================================
+   MOTION
+   Personality: premium/calm. One easing, three durations.
+   Everything here is opt-in via class or data attribute and
+   collapses to instant under prefers-reduced-motion (see BASE).
+   ============================================================ */
+:root {
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+  --t-quick: 150ms;
+  --t-std: 260ms;
+  --t-slow: 520ms;
+}
+
+@layer components {
+  /* Pill buttons: lift on hover, press on active, arrow chip nudges. */
+  .btn {
+    transition:
+      transform var(--t-quick) var(--ease),
+      box-shadow var(--t-quick) var(--ease),
+      background-color var(--t-quick) var(--ease),
+      border-color var(--t-quick) var(--ease),
+      color var(--t-quick) var(--ease),
+      opacity var(--t-quick) var(--ease);
+  }
+  .btn:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px -8px rgba(11, 17, 64, 0.35);
+  }
+  .btn:active:not(:disabled) {
+    transform: translateY(0) scale(0.98);
+    box-shadow: none;
+    transition-duration: 80ms;
+  }
+  .chip {
+    transition: transform var(--t-std) var(--ease);
+  }
+  .btn:hover .chip {
+    transform: translateX(3px);
+  }
+
+  /* Photos: slow zoom on hover of their frame. */
+  main div:has(> img.object-cover) > img,
+  main li:has(> img.object-cover) > img {
+    transition: transform var(--t-slow) var(--ease);
+  }
+  main div:has(> img.object-cover):hover > img,
+  main li:has(> img.object-cover):hover > img {
+    transform: scale(1.04);
+  }
+
+  /* Scroll reveal. Attributes are set by <MotionInit/>, so with no JS
+     nothing is ever hidden. transform ends at `none` so fixed-position
+     children (the interstitial) get their containing block back. */
+  [data-reveal] {
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+      opacity var(--t-slow) var(--ease),
+      transform var(--t-slow) var(--ease);
+    transition-delay: calc(var(--i, 0) * 70ms);
+  }
+  [data-reveal][data-in] {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Hero: readings slide in from the scan line, dots breathe. */
+  .hero-chip {
+    animation: chip-in var(--t-slow) var(--ease) both;
+    animation-delay: calc(400ms + var(--n, 0) * 90ms);
+  }
+  @keyframes chip-in {
+    from { opacity: 0; transform: translateX(-12px); }
+    to   { opacity: 1; transform: none; }
+  }
+  .pulse {
+    animation: pulse 2.4s ease-in-out infinite;
+    animation-delay: calc(var(--n, 0) * 300ms);
+  }
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 9px 2px rgba(20, 190, 240, 0.75); }
+    50%      { box-shadow: 0 0 14px 5px rgba(20, 190, 240, 0.45); }
+  }
+
+  /* Modal */
+  .modal-backdrop { animation: fade-in var(--t-std) var(--ease) both; }
+  .modal-panel    { animation: pop-in 360ms var(--ease) both; }
+  @keyframes fade-in { from { opacity: 0; } }
+  @keyframes pop-in  { from { opacity: 0; transform: translateY(16px) scale(0.98); } }
+
+  /* Assessment: each question / stage slides in. */
+  .step-in { animation: step-in var(--t-std) var(--ease) both; }
+  @keyframes step-in { from { opacity: 0; transform: translateX(14px); } }
+}

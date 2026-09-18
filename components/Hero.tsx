@@ -49,14 +49,14 @@ export function Hero() {
           <div className="flex flex-wrap items-center gap-4">
             <a
               href="#understand"
-              className="flex items-center gap-[18px] rounded-full bg-[#28328C] py-2.5 pl-[26px] pr-2.5 text-[18px] font-semibold text-white"
+              className="btn flex items-center gap-[18px] rounded-full bg-[#28328C] py-2.5 pl-[26px] pr-2.5 text-[18px] font-semibold text-white"
             >
               {screen1.primaryCta}
               <ArrowChip />
             </a>
             <a
               href="#check"
-              className="flex items-center rounded-full border-[1.5px] border-[#28328C] px-7 py-3.5 text-[18px] font-semibold leading-[1.55] text-[#28328C]"
+              className="btn flex items-center rounded-full border-[1.5px] border-[#28328C] px-7 py-3.5 text-[18px] font-semibold leading-[1.55] text-[#28328C]"
             >
               {screen1.secondaryCta}
             </a>
@@ -138,15 +138,15 @@ export function Hero() {
           </span>
 
           <ul>
-            {readings.map((r) => (
+            {readings.map((r, n) => (
               <li
                 key={r.label}
                 className="hero-chip absolute flex items-center gap-2.5 rounded-full border border-[rgba(20,190,240,0.5)] bg-[rgba(11,17,64,0.7)] py-[9px] pl-2.5 pr-3.5 backdrop-blur-[5px] max-lg:gap-1.5 max-lg:py-[5px] max-lg:pl-1.5 max-lg:pr-2"
-                style={{ '--chip-left': pct(r.left, W), top: pct(r.top, H) } as React.CSSProperties}
+                style={{ '--chip-left': pct(r.left, W), '--n': n, top: pct(r.top, H) } as React.CSSProperties}
               >
                 <span
                   aria-hidden="true"
-                  className="block shrink-0 rounded-full bg-[#14BEF0]"
+                  className="pulse block shrink-0 rounded-full bg-[#14BEF0]"
                   style={{ width: 8, height: 8, boxShadow: '0 0 9px 2px rgba(20,190,240,0.75)' }}
                 />
                 <span className="truncate whitespace-nowrap text-[clamp(9px,0.97vw,14px)] font-medium text-white">

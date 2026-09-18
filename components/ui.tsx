@@ -109,7 +109,7 @@ export function ArrowChip({ className = '' }: { className?: string }) {
   return (
     <span
       aria-hidden="true"
-      className={`grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[var(--chip-arrow-bg)] ${className}`}
+      className={`chip grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[var(--chip-arrow-bg)] ${className}`}
     >
       <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true">
         <path
@@ -142,7 +142,7 @@ export function Button({
   ...rest
 }: BtnProps) {
   const base =
-    'inline-flex items-center gap-4 rounded-pill text-[1.0625rem] font-semibold transition-transform duration-150 active:scale-[0.99]';
+    'btn inline-flex items-center gap-4 rounded-pill text-[1.0625rem] font-semibold transition-transform duration-150 active:scale-[0.99]';
   const styles =
     variant === 'primary'
       ? `bg-[var(--btn-primary-bg)] text-[var(--btn-primary-fg)] pl-7 ${withArrow ? 'pr-2.5 py-2.5' : 'pr-7 py-3.5'}`

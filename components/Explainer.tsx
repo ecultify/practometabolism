@@ -35,7 +35,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { explainer } from '@/lib/content';
 import { Txt } from './ui';
 
-const PILL = 'rounded-[999px] whitespace-nowrap transition-colors';
+const PILL = 'btn rounded-[999px] whitespace-nowrap';
 
 export function Explainer() {
   const [open, setOpen] = useState(false);

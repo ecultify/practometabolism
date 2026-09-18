@@ -79,7 +79,7 @@ export function SiteNav() {
                     aria-current={on ? 'true' : undefined}
                     className={[
                       'flex items-center gap-[8px] overflow-hidden rounded-[999px] px-[16px] py-[8px]',
-                      'whitespace-nowrap text-[14px] font-medium leading-normal transition-colors',
+                      'btn whitespace-nowrap text-[14px] font-medium leading-normal',
                       on ? 'bg-[#28328c] text-white' : 'text-[#4a5487] hover:bg-white',
                     ].join(' ')}
                   >

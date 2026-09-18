@@ -43,9 +43,9 @@ type Answers = Record<string, string>;
 type Stage = 'intro' | 'questions' | 'summary';
 
 const PILL_PRIMARY =
-  'flex shrink-0 items-center gap-[14px] overflow-hidden rounded-[999px] bg-[#28328c] py-[10px] pl-[22px] pr-[10px] font-semibold leading-[1.55] text-white';
+  'btn flex shrink-0 items-center gap-[14px] overflow-hidden rounded-[999px] bg-[#28328c] py-[10px] pl-[22px] pr-[10px] font-semibold leading-[1.55] text-white';
 const PILL_OUTLINE =
-  'flex shrink-0 items-center rounded-[999px] border-[1.5px] border-solid border-[#28328c] px-[22px] py-[10px] text-[16px] font-semibold leading-[1.55] text-[#28328c] disabled:opacity-40';
+  'btn flex shrink-0 items-center rounded-[999px] border-[1.5px] border-solid border-[#28328c] px-[22px] py-[10px] text-[16px] font-semibold leading-[1.55] text-[#28328c] disabled:opacity-40';
 
 export function AssessmentTool() {
   const [stage, setStage] = useState<Stage>('intro');
@@ -192,7 +192,7 @@ export function AssessmentTool() {
                   </div>
                 </div>
 
-                <fieldset className="flex w-full flex-col items-start gap-[12px]">
+                <fieldset key={q.id} className="step-in flex w-full flex-col items-start gap-[12px]">
                   <legend className="sr-only">{q.question}</legend>
                   <p className="w-full text-[12px] font-semibold leading-[1.5] tracking-[0.48px] text-[#28328c]">
                     {q.label}
@@ -218,7 +218,7 @@ export function AssessmentTool() {
                           role="radio"
                           aria-checked={active}
                           onClick={() => setAnswers((a) => ({ ...a, [q.id]: o.value }))}
-                          className={`shrink-0 whitespace-nowrap rounded-[999px] px-[16px] py-[6px] text-[13px] font-semibold transition-colors max-sm:whitespace-normal ${
+                          className={`btn shrink-0 whitespace-nowrap rounded-[999px] px-[16px] py-[6px] text-[13px] font-semibold max-sm:whitespace-normal ${
                             active
                               ? 'bg-[#28328c] text-white'
                               : 'bg-[#f3f6fc] text-[#28328c] hover:bg-[#eaf8fe]'

@@ -8,6 +8,7 @@ import '@fontsource/poppins/600.css';
 import '@fontsource/poppins/700.css';
 import '@fontsource/poppins/400-italic.css';
 import './globals.css';
+import { MotionInit } from '@/components/MotionInit';
 
 export const metadata: Metadata = {
   title: 'Metabolic health awareness | Practo',
@@ -33,6 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Skip to content
         </a>
         {children}
+        <MotionInit />
       </body>
     </html>
   );

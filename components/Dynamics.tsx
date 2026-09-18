@@ -86,7 +86,7 @@ export function Dynamics() {
 
           <a
             href="#understand"
-            className="flex shrink-0 items-center gap-[18px] overflow-hidden rounded-[999px] bg-white py-[10px] pl-[26px] pr-[10px] text-[18px] font-semibold text-[#28328c]"
+            className="btn flex shrink-0 items-center gap-[18px] overflow-hidden rounded-[999px] bg-white py-[10px] pl-[26px] pr-[10px] text-[18px] font-semibold text-[#28328c]"
           >
             {screen2.cta}
             <ArrowChip />

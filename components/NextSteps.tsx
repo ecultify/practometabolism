@@ -120,7 +120,7 @@ export function NextSteps() {
                         openerRef.current = e.currentTarget;
                         setOpenFor(o.id);
                       }}
-                      className="flex shrink-0 items-center gap-[18px] overflow-hidden rounded-[999px] bg-white py-[10px] pl-[26px] pr-[10px] text-[17px] font-semibold leading-[1.55] text-[#28328c]"
+                      className="btn flex shrink-0 items-center gap-[18px] overflow-hidden rounded-[999px] bg-white py-[10px] pl-[26px] pr-[10px] text-[17px] font-semibold leading-[1.55] text-[#28328c]"
                     >
                       {screen9.cta}
                       <ArrowChip />
@@ -149,7 +149,7 @@ export function NextSteps() {
       {/* ---- Interstitial overlay (2256:29) ---- */}
       {openFor && (
         <div
-          className="fixed inset-0 z-50 grid place-items-center overflow-y-auto bg-[rgba(11,17,64,0.55)] p-4"
+          className="modal-backdrop fixed inset-0 z-50 grid place-items-center overflow-y-auto bg-[rgba(11,17,64,0.55)] p-4"
           onClick={(e) => { if (e.target === e.currentTarget) close(); }}
         >
           <div
@@ -157,7 +157,7 @@ export function NextSteps() {
             role="dialog"
             aria-modal="true"
             aria-labelledby="interstitial-title"
-            className="flex w-[880px] max-w-full flex-col items-start gap-[24px] overflow-hidden rounded-[28px] border border-solid border-[#e3e9f7] bg-white p-[48px] max-sm:p-6"
+            className="modal-panel flex w-[880px] max-w-full flex-col items-start gap-[24px] overflow-hidden rounded-[28px] border border-solid border-[#e3e9f7] bg-white p-[48px] max-sm:p-6"
             style={{ boxShadow: '0px 24px 60px 0px rgba(10,15,46,0.28)' }}
           >
             <p className="w-full text-[13px] font-semibold leading-[1.5] tracking-[0.26px] text-[#28328c]">
@@ -184,14 +184,14 @@ export function NextSteps() {
               <button
                 type="button"
                 onClick={close}
-                className="flex shrink-0 items-center rounded-[999px] border-[1.5px] border-solid border-[#28328c] px-[26px] py-[10px] text-[17px] font-semibold leading-[1.55] text-[#28328c]"
+                className="btn flex shrink-0 items-center rounded-[999px] border-[1.5px] border-solid border-[#28328c] px-[26px] py-[10px] text-[17px] font-semibold leading-[1.55] text-[#28328c]"
               >
                 {interstitial.stay}
               </button>
               <a
                 href={interstitial.href}
                 rel="noopener"
-                className="flex shrink-0 items-center gap-[18px] overflow-hidden rounded-[999px] bg-[#28328c] py-[10px] pl-[26px] pr-[10px] text-[17px] font-semibold leading-[1.55] text-white"
+                className="btn flex shrink-0 items-center gap-[18px] overflow-hidden rounded-[999px] bg-[#28328c] py-[10px] pl-[26px] pr-[10px] text-[17px] font-semibold leading-[1.55] text-white"
               >
                 {interstitial.go}
                 <ArrowChip />
