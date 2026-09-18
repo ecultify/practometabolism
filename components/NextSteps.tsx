@@ -5,7 +5,7 @@
  * and 2256:29 / 2251:28 (the interstitial overlay and its modal).
  *
  *   section   bg #0b1140, px 56, pt 140, pb 120, flex-col items-start, gap 72
- *   glow      2242:647 — 1000 x 1000 at (-300, 200), #28328c, layer blur 200
+ *   glow      2242:647 — 1000 x 1000 at (-300, 200), #28328c, layer blur 200 — drawn as a radial-gradient on the section
  *   main      flex gap 80 items-start
  *     copy    w460, gap 28, pt 16
  *             eyebrow SemiBold 13 / 1.4 #8fe3fa tracking 1.04px
@@ -75,14 +75,18 @@ export function NextSteps() {
 
   return (
     <>
-      <section id="next-steps" data-node-id="2242:646" className="scroll-mt-24 bg-[#0b1140]">
-        <div className="relative mx-auto w-full max-w-[1440px] overflow-hidden">
-          {/* 2242:647 — glow */}
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute left-[-300px] top-[200px] size-[1000px] rounded-full bg-[#28328c] opacity-90 max-lg:hidden"
-            style={{ filter: 'blur(100px)' }}
-          />
+      <section
+        id="next-steps"
+        data-node-id="2242:646"
+        className="scroll-mt-24 bg-[#0b1140]"
+        // 2242:647 — 1000px #28328c circle at (-300,200) with layer blur 200, drawn as a
+        // gradient on the full-bleed section so it never clips at the 1440 frame edge.
+        style={{
+          backgroundImage:
+            'radial-gradient(circle 760px at calc(50% - 520px) 700px, rgba(40,50,140,0.9) 0%, rgba(40,50,140,0.6) 40%, rgba(40,50,140,0) 100%)',
+        }}
+      >
+        <div className="relative mx-auto w-full max-w-[1440px]">
 
           <div className="relative flex flex-col items-start gap-[72px] px-[56px] pb-[120px] pt-[140px] max-lg:gap-12 max-lg:px-6 max-lg:pb-20 max-lg:pt-24">
             {/* ---- Main (2242:648) ---- */}

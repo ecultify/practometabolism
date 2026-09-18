@@ -34,7 +34,7 @@ export function Hero() {
       <div className="mx-auto flex w-full max-w-[1440px] flex-col items-stretch gap-10 px-6 pt-14 md:px-14 lg:flex-row lg:items-end lg:pt-[72px]">
         {/* ---- Copy ---- */}
         <div className="flex min-w-0 flex-1 flex-col items-start gap-7 pb-10 lg:pb-[72px]">
-          <p className="text-[13px] font-semibold uppercase leading-[1.4] tracking-[0.08em] text-[#28328C]">
+          <p className="text-[13px] font-semibold leading-[1.4] tracking-[1.04px] text-[#28328C]">
             {screen1.eyebrow}
           </p>
 

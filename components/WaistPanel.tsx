@@ -7,7 +7,7 @@
  * card inside is the design's own note about that.
  *
  *   section  bg #eaf8fe, flex-col items-start
- *   ruler    2242:206 — bg white, h56, ticks every 12px, w1.5
+ *   ruler    2242:206 — bg white, h56, ticks every 12px, w1.5, full-bleed
  *            major (x % 120 === 0) h26 rgba(40,50,140,.9)
  *            mid   (x % 60  === 0) h18 rgba(40,50,140,.35)
  *            minor                 h10 rgba(40,50,140,.35)
@@ -42,7 +42,8 @@
 import { waistPanel as w } from '@/lib/content';
 
 /* ---------- 2242:206 tape ruler ---------- */
-const RULER_W = 1440;
+// Full-bleed: the ruler runs edge to edge on any viewport, so ticks cover 4K.
+const RULER_W = 3840;
 const ticks = Array.from({ length: Math.floor(RULER_W / 12) }, (_, i) => i * 12);
 
 function TapeRuler() {
@@ -185,9 +186,8 @@ export function WaistPanel() {
 
   return (
     <section data-node-id="2242:205" className="flex flex-col items-start bg-[#eaf8fe]">
+      <TapeRuler />
       <div className="mx-auto w-full max-w-[1440px]">
-        <TapeRuler />
-
         <div className="flex w-full flex-col items-start gap-[24px] px-[56px] pb-[112px] pt-[96px] max-lg:gap-5 max-lg:px-6 max-lg:pb-16 max-lg:pt-14">
           {/* ---- Bento row 1 (2242:339) ---- */}
           <div className="flex w-full items-start gap-[24px] max-lg:flex-col">
@@ -206,7 +206,7 @@ export function WaistPanel() {
                   alt={w.photoAlt}
                   loading="lazy"
                   decoding="async"
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover object-[12%_center]"
                 />
               </div>
               <div
