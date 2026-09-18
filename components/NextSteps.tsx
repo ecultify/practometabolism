@@ -184,7 +184,7 @@ export function NextSteps() {
               <button
                 type="button"
                 onClick={close}
-                className="btn flex shrink-0 items-center rounded-[999px] border-[1.5px] border-solid border-[#28328c] px-[26px] py-[10px] text-[17px] font-semibold leading-[1.55] text-[#28328c]"
+                className="btn btn-outline flex shrink-0 items-center rounded-[999px] border-[1.5px] border-solid border-[#28328c] px-[26px] py-[10px] text-[17px] font-semibold leading-[1.55] text-[#28328c]"
               >
                 {interstitial.stay}
               </button>

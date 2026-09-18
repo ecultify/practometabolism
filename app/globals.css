@@ -209,95 +209,112 @@
 
 /* ============================================================
    MOTION
-   Personality: premium/calm. One easing, three durations.
-   Everything here is opt-in via class or data attribute and
-   collapses to instant under prefers-reduced-motion (see BASE).
+   Thesis: the page is about looking past the surface. The one authored
+   moment is the hero scan — the cyan line sweeps in from the edge, the
+   "inside" view follows it, the readings surface once it has passed.
+   Everything else is feedback (buttons), continuity (explainer, tabs,
+   questions, modal) or the rules of the page drawing themselves in.
+   Nothing is hidden by default; JS only adds attributes.
    ============================================================ */
 :root {
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --ease: cubic-bezier(0.2, 0, 0, 1);
-  --t-quick: 150ms;
-  --t-std: 260ms;
-  --t-slow: 520ms;
 }
 
 @layer components {
-  /* Pill buttons: lift on hover, press on active, arrow chip nudges. */
+  /* ---- Buttons: press feedback + arrow chip fills cyan and turns 45° up ---- */
   .btn {
     transition:
-      transform var(--t-quick) var(--ease),
-      box-shadow var(--t-quick) var(--ease),
-      background-color var(--t-quick) var(--ease),
-      border-color var(--t-quick) var(--ease),
-      color var(--t-quick) var(--ease),
-      opacity var(--t-quick) var(--ease);
-  }
-  .btn:hover:not(:disabled) {
-    transform: translateY(-1px);
-    box-shadow: 0 8px 20px -8px rgba(11, 17, 64, 0.35);
+      transform 140ms var(--ease-out),
+      background-color 160ms var(--ease),
+      border-color 160ms var(--ease),
+      color 160ms var(--ease),
+      opacity 160ms var(--ease);
   }
   .btn:active:not(:disabled) {
-    transform: translateY(0) scale(0.98);
-    box-shadow: none;
-    transition-duration: 80ms;
+    transform: scale(0.97);
   }
   .chip {
-    transition: transform var(--t-std) var(--ease);
+    transition: background-color 200ms var(--ease), color 200ms var(--ease);
   }
-  .btn:hover .chip {
-    transform: translateX(3px);
+  .chip svg {
+    transition: transform 260ms var(--ease-out);
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .btn:hover .chip {
+      background-color: #14bef0;
+      color: #0b1140;
+    }
+    .btn:hover .chip svg {
+      transform: rotate(-45deg);
+    }
+    .btn.btn-outline:hover {
+      background-color: rgba(40, 50, 140, 0.06);
+    }
   }
 
-  /* Photos: slow zoom on hover of their frame. */
-  main div:has(> img.object-cover) > img,
-  main li:has(> img.object-cover) > img {
-    transition: transform var(--t-slow) var(--ease);
+  /* ---- Hero scan (2242:51): line sweeps in from the right edge, the inside
+         view follows it, readings surface once it has passed. ---- */
+  .scan-line   { animation: scan-line 1100ms var(--ease-out) 250ms both; }
+  .scan-inside { animation: scan-inside 1100ms var(--ease-out) 250ms both; }
+  .scan-tag    { animation: fade 400ms var(--ease-out) 900ms both; }
+  .hero-chip {
+    animation: reading-in 480ms var(--ease-out) both;
+    animation-delay: calc(1000ms + var(--n, 0) * 80ms);
   }
-  main div:has(> img.object-cover):hover > img,
-  main li:has(> img.object-cover):hover > img {
-    transform: scale(1.04);
-  }
+  @keyframes scan-line   { from { left: 100%; } }
+  @keyframes scan-inside { from { clip-path: inset(0 0 0 100%); } to { clip-path: inset(0); } }
+  @keyframes reading-in  { from { opacity: 0; transform: translateX(10px) scale(0.96); } }
+  @keyframes fade        { from { opacity: 0; } }
 
-  /* Scroll reveal. Attributes are set by <MotionInit/>, so with no JS
-     nothing is ever hidden. transform ends at `none` so fixed-position
-     children (the interstitial) get their containing block back. */
-  [data-reveal] {
-    opacity: 0;
-    transform: translateY(18px);
-    transition:
-      opacity var(--t-slow) var(--ease),
-      transform var(--t-slow) var(--ease);
+  /* ---- Rules draw in once seen: measures band, quote wall ---- */
+  .rule-draw {
+    transform-origin: left center;
+    transition: transform 700ms var(--ease-out);
     transition-delay: calc(var(--i, 0) * 70ms);
   }
-  [data-reveal][data-in] {
-    opacity: 1;
-    transform: none;
-  }
+  .rule-draw[data-hidden]:not([data-in]) { transform: scaleX(0); }
 
-  /* Hero: readings slide in from the scan line, dots breathe. */
-  .hero-chip {
-    animation: chip-in var(--t-slow) var(--ease) both;
-    animation-delay: calc(400ms + var(--n, 0) * 90ms);
+  /* ---- Photos below the fold uncover from the bottom as they arrive ---- */
+  .frame-reveal {
+    transition: clip-path 800ms var(--ease-out);
+    transition-delay: calc(var(--i, 0) * 60ms);
   }
-  @keyframes chip-in {
-    from { opacity: 0; transform: translateX(-12px); }
-    to   { opacity: 1; transform: none; }
-  }
-  .pulse {
-    animation: pulse 2.4s ease-in-out infinite;
-    animation-delay: calc(var(--n, 0) * 300ms);
-  }
-  @keyframes pulse {
-    0%, 100% { box-shadow: 0 0 9px 2px rgba(20, 190, 240, 0.75); }
-    50%      { box-shadow: 0 0 14px 5px rgba(20, 190, 240, 0.45); }
-  }
+  .frame-reveal[data-hidden]:not([data-in]) { clip-path: inset(0 0 100% 0); }
 
-  /* Modal */
-  .modal-backdrop { animation: fade-in var(--t-std) var(--ease) both; }
-  .modal-panel    { animation: pop-in 360ms var(--ease) both; }
-  @keyframes fade-in { from { opacity: 0; } }
-  @keyframes pop-in  { from { opacity: 0; transform: translateY(16px) scale(0.98); } }
+  /* ---- Continuity ---- */
+  .collapse {
+    display: grid;
+    grid-template-rows: 0fr;
+    visibility: hidden;
+    transition: grid-template-rows 420ms var(--ease-out), visibility 0s 420ms;
+  }
+  .collapse[data-open] {
+    grid-template-rows: 1fr;
+    visibility: visible;
+    transition-delay: 0s;
+  }
+  .collapse > * { min-height: 0; overflow: hidden; }
 
-  /* Assessment: each question / stage slides in. */
-  .step-in { animation: step-in var(--t-std) var(--ease) both; }
-  @keyframes step-in { from { opacity: 0; transform: translateX(14px); } }
+  .panel-in { animation: panel-in 220ms var(--ease-out) both; }
+  @keyframes panel-in { from { opacity: 0; transform: translateY(4px); filter: blur(3px); } }
+
+  .step-in { animation: step-in 220ms var(--ease-out) both; }
+  @keyframes step-in { from { opacity: 0; transform: translateX(8px); } }
+
+  .modal-backdrop { animation: fade 200ms var(--ease-out) both; }
+  .modal-panel    { animation: modal-in 260ms var(--ease-out) both; }
+  @keyframes modal-in { from { opacity: 0; transform: translateY(8px) scale(0.97); } }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* keep fades and colour feedback, drop spatial motion */
+  .scan-line, .scan-inside, .hero-chip, .step-in, .panel-in, .modal-panel {
+    animation: fade 200ms ease both;
+  }
+  .rule-draw, .frame-reveal { transition: none; }
+  .rule-draw[data-hidden]:not([data-in]), .frame-reveal[data-hidden]:not([data-in]) {
+    transform: none; clip-path: none;
+  }
+  .btn:active:not(:disabled) { transform: none; }
 }

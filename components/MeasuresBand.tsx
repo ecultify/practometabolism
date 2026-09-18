@@ -53,7 +53,7 @@ export function MeasuresBand() {
               </span>
               <span
                 aria-hidden="true"
-                className="block h-[4px] w-[120px] rounded-[2px]"
+                className="rule-draw block h-[4px] w-[120px] rounded-[2px]"
                 style={{ backgroundImage: RULE }}
               />
             </li>

@@ -127,7 +127,7 @@ export function Symptoms() {
                     style={{ '--q-indent': `${quoteLayout[i].indent}px` } as React.CSSProperties}
                   >
                     <span
-                      className="quote-rule block h-[2px] bg-[#14bef0]"
+                      className="quote-rule rule-draw block h-[2px] bg-[#14bef0]"
                       style={{ '--q-rule': `${quoteLayout[i].rule}px` } as React.CSSProperties}
                     />
                   </div>

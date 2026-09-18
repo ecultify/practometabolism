@@ -109,13 +109,12 @@ export function ArrowChip({ className = '' }: { className?: string }) {
   return (
     <span
       aria-hidden="true"
-      className={`chip grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[var(--chip-arrow-bg)] ${className}`}
+      className={`chip grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[var(--chip-arrow-bg)] text-white ${className}`}
     >
       <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true">
         <path
           d="M2.5 8h10M8.5 3.5 13 8l-4.5 4.5"
           stroke="currentColor"
-          className="text-white"
           strokeWidth="1.6"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -146,7 +145,7 @@ export function Button({
   const styles =
     variant === 'primary'
       ? `bg-[var(--btn-primary-bg)] text-[var(--btn-primary-fg)] pl-7 ${withArrow ? 'pr-2.5 py-2.5' : 'pr-7 py-3.5'}`
-      : `border-[1.5px] border-[var(--btn-secondary-border)] text-[var(--btn-secondary-fg)] px-7 py-3.5`;
+      : `btn-outline border-[1.5px] border-[var(--btn-secondary-border)] text-[var(--btn-secondary-fg)] px-7 py-3.5`;
   const inner = (
     <>
       {children}

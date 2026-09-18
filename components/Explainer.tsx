@@ -97,7 +97,9 @@ export function Explainer() {
           </button>
         </div>
 
-        <div id="explainer-body" className={open ? 'flex w-full flex-col gap-[32px]' : 'hidden'}>
+        <div id="explainer-body" className="collapse -mt-[32px] w-full" data-open={open || undefined}>
+          <div className="flex w-full flex-col gap-[32px]">
+          <div aria-hidden="true" className="h-0" />
           {/* ---- Tabs (2244:36) ---- */}
           <div
             role="tablist"
@@ -118,7 +120,7 @@ export function Explainer() {
                 className={`${PILL} px-[22px] py-[11px] text-[15px] font-medium leading-[1.55] ${
                   i === active
                     ? 'bg-[#28328c] text-white'
-                    : 'bg-white text-[#28328c] hover:bg-white/70'
+                    : 'bg-white text-[#28328c]'
                 }`}
               >
                 {t.label}
@@ -137,7 +139,7 @@ export function Explainer() {
                 tabIndex={0}
                 className={
                   i === active
-                    ? 'flex w-full flex-col items-start gap-[16px] rounded-[24px] bg-white p-[36px] max-lg:p-7'
+                    ? 'panel-in flex w-full flex-col items-start gap-[16px] rounded-[24px] bg-white p-[36px] max-lg:p-7'
                     : 'hidden'
                 }
               >
@@ -187,7 +189,7 @@ export function Explainer() {
               type="button"
               onClick={() => go(active - 1)}
               disabled={active === 0}
-              className={`${PILL} border-[1.5px] border-solid border-[#28328c] px-[26px] py-[12px] text-[16px] font-semibold leading-[1.55] text-[#28328c] disabled:opacity-40`}
+              className={`${PILL} btn-outline border-[1.5px] border-solid border-[#28328c] px-[26px] py-[12px] text-[16px] font-semibold leading-[1.55] text-[#28328c] disabled:opacity-40`}
             >
               {explainer.prev}
             </button>
@@ -195,7 +197,7 @@ export function Explainer() {
               type="button"
               onClick={() => go(active + 1)}
               disabled={active === tabs.length - 1}
-              className={`${PILL} border-[1.5px] border-solid border-[#28328c] px-[26px] py-[12px] text-[16px] font-semibold leading-[1.55] text-[#28328c] disabled:opacity-40`}
+              className={`${PILL} btn-outline border-[1.5px] border-solid border-[#28328c] px-[26px] py-[12px] text-[16px] font-semibold leading-[1.55] text-[#28328c] disabled:opacity-40`}
             >
               {explainer.next}
             </button>
@@ -209,6 +211,7 @@ export function Explainer() {
           </div>
 
           <p className="w-full text-[12px] italic leading-[1.5] text-[#6b75a8]">{explainer.note}</p>
+          </div>
         </div>
       </div>
     </section>

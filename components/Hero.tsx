@@ -56,7 +56,7 @@ export function Hero() {
             </a>
             <a
               href="#check"
-              className="btn flex items-center rounded-full border-[1.5px] border-[#28328C] px-7 py-3.5 text-[18px] font-semibold leading-[1.55] text-[#28328C]"
+              className="btn btn-outline flex items-center rounded-full border-[1.5px] border-[#28328C] px-7 py-3.5 text-[18px] font-semibold leading-[1.55] text-[#28328C]"
             >
               {screen1.secondaryCta}
             </a>
@@ -94,14 +94,14 @@ export function Hero() {
           {/* Inside tint: right half */}
           <div
             aria-hidden="true"
-            className="absolute top-0 h-full bg-[rgba(11,17,64,0.62)]"
+            className="scan-inside absolute top-0 h-full bg-[rgba(11,17,64,0.62)]"
             style={{ left: pct(300, W), width: pct(300, W) }}
           />
 
           {/* Scan line */}
           <div
             aria-hidden="true"
-            className="absolute top-0 h-full bg-[#14BEF0]"
+            className="scan-line absolute top-0 h-full bg-[#14BEF0]"
             style={{
               left: pct(299, W),
               width: pct(3, W),
@@ -112,7 +112,7 @@ export function Hero() {
           {/* Inside grid */}
           <div
             aria-hidden="true"
-            className="absolute top-0 h-full overflow-hidden"
+            className="scan-inside absolute top-0 h-full overflow-hidden"
             style={{ left: pct(300, W), width: pct(300, W) }}
           >
             {gridLines.map((y) => (
@@ -131,7 +131,7 @@ export function Hero() {
             Outside
           </span>
           <span
-            className="absolute flex items-center rounded-full bg-[#14BEF0] px-3.5 py-2 text-[clamp(10px,0.9vw,13px)] font-semibold text-[#0B1140]"
+            className="scan-tag absolute flex items-center rounded-full bg-[#14BEF0] px-3.5 py-2 text-[clamp(10px,0.9vw,13px)] font-semibold text-[#0B1140]"
             style={{ left: pct(508, W), top: pct(24, H) }}
           >
             Inside
@@ -146,7 +146,7 @@ export function Hero() {
               >
                 <span
                   aria-hidden="true"
-                  className="pulse block shrink-0 rounded-full bg-[#14BEF0]"
+                  className="block shrink-0 rounded-full bg-[#14BEF0]"
                   style={{ width: 8, height: 8, boxShadow: '0 0 9px 2px rgba(20,190,240,0.75)' }}
                 />
                 <span className="truncate whitespace-nowrap text-[clamp(9px,0.97vw,14px)] font-medium text-white">
