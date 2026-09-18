@@ -63,11 +63,11 @@ export function Dynamics() {
             {screen2.subhead}
           </p>
 
-          <div className="flex h-[188px] w-full items-start gap-[24px] overflow-hidden rounded-[28px] border border-solid border-[rgba(255,255,255,0.12)] max-md:h-auto max-md:flex-col">
+          <div className="flex h-[188px] w-full items-start gap-[24px] overflow-hidden rounded-[28px] border border-solid border-[rgba(255,255,255,0.12)] max-md:h-auto max-md:flex-col max-md:rounded-none max-md:border-0">
             {screen2.cards.map((c) => (
               <div
                 key={c.title}
-                className="flex h-full min-w-0 flex-1 flex-col items-start gap-[14px] overflow-hidden rounded-[22px] bg-[#131a4d] p-[28px] max-md:h-auto max-md:w-full"
+                className="flex h-full min-w-0 flex-1 flex-col items-start gap-[14px] overflow-hidden rounded-[22px] bg-[#131a4d] p-[28px] max-md:h-auto max-md:w-full max-md:border max-md:border-solid max-md:border-[rgba(255,255,255,0.12)]"
               >
                 <p className="w-full text-[18px] font-semibold leading-[1.5] text-white">
                   {c.title}

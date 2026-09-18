@@ -15,13 +15,26 @@
  *   spacer   132 x 10 (balances the logo so the pill group stays centred)
  */
 
-import { useEffect, useState } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { nav } from '@/lib/content';
 
 const sectionIds = nav.links.map((l) => l.href.replace('#', ''));
 
 export function SiteNav() {
   const [active, setActive] = useState(0);
+  const linkRefs = useRef<(HTMLAnchorElement | null)[]>([]);
+  const [pill, setPill] = useState<{ x: number; w: number; h: number } | null>(null);
+
+  // the active pill is one element that slides between steps
+  useLayoutEffect(() => {
+    const measure = () => {
+      const a = linkRefs.current[active];
+      if (a) setPill({ x: a.offsetLeft, w: a.offsetWidth, h: a.offsetHeight });
+    };
+    measure();
+    window.addEventListener('resize', measure);
+    return () => window.removeEventListener('resize', measure);
+  }, [active]);
 
   useEffect(() => {
     const nodes = sectionIds
@@ -69,23 +82,35 @@ export function SiteNav() {
         </a>
 
         <nav aria-label="Sections" className="max-lg:hidden">
-          <ul className="flex items-center gap-[6px] overflow-hidden rounded-[999px] bg-[#f3f6fc] p-[6px]">
+          <ul className="relative flex items-center gap-[6px] overflow-hidden rounded-[999px] bg-[#f3f6fc] p-[6px]">
+            <span
+              aria-hidden="true"
+              className="nav-pill absolute left-0 top-0 rounded-[999px] bg-[#28328c]"
+              style={
+                pill
+                  ? { transform: `translateX(${pill.x}px)`, width: pill.w, height: pill.h, top: 6 }
+                  : { opacity: 0 }
+              }
+            />
             {nav.links.map((l, i) => {
               const on = i === active;
               return (
                 <li key={l.href}>
                   <a
+                    ref={(el) => { linkRefs.current[i] = el; }}
                     href={l.href}
                     aria-current={on ? 'true' : undefined}
                     className={[
-                      'flex items-center gap-[8px] overflow-hidden rounded-[999px] px-[16px] py-[8px]',
+                      'relative flex items-center gap-[8px] overflow-hidden rounded-[999px] px-[16px] py-[8px]',
                       'btn whitespace-nowrap text-[14px] font-medium leading-normal',
-                      on ? 'bg-[#28328c] text-white' : 'text-[#4a5487] hover:bg-white',
+                      on ? 'text-white' : 'text-[#4a5487] hover:bg-white',
+                      // while the pill is still unmeasured, fall back to a static fill
+                      on && !pill ? 'bg-[#28328c]' : '',
                     ].join(' ')}
                   >
                     <span
                       aria-hidden="true"
-                      className="block size-[6px] shrink-0 rounded-full"
+                      className="nav-dot block size-[6px] shrink-0 rounded-full"
                       style={{ background: on ? '#14bef0' : '#a7b1d9' }}
                     />
                     {l.label}

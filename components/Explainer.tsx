@@ -100,12 +100,16 @@ export function Explainer() {
         <div id="explainer-body" className="collapse -mt-[32px] w-full" data-open={open || undefined}>
           <div className="flex w-full flex-col gap-[32px]">
           <div aria-hidden="true" className="h-0" />
-          {/* ---- Tabs (2244:36) ---- */}
+          {/* ---- Tabs (2244:36) + Panels (2244:45) ----
+               Desktop: tab row, then the open panel. Below md the two
+               wrappers become display:contents and `order` interleaves
+               each tab with its own panel, so it reads as an accordion. */}
+          <div className="flex w-full flex-col md:gap-[32px]">
           <div
             role="tablist"
             aria-label={explainer.headline}
             onKeyDown={onKeyDown}
-            className="flex w-full flex-wrap content-start items-start gap-[12px]"
+            className="flex w-full flex-wrap content-start items-start gap-[12px] max-md:contents"
           >
             {tabs.map((t, i) => (
               <button
@@ -117,7 +121,8 @@ export function Explainer() {
                 aria-controls={`panel-${t.id}`}
                 tabIndex={i === active ? 0 : -1}
                 onClick={() => setActive(i)}
-                className={`${PILL} px-[22px] py-[11px] text-[15px] font-medium leading-[1.55] ${
+                style={{ order: i * 2 }}
+                className={`${PILL} px-[22px] py-[11px] text-[15px] font-medium leading-[1.55] max-md:mb-[12px] max-md:self-start ${
                   i === active
                     ? 'bg-[#28328c] text-white'
                     : 'bg-white text-[#28328c]'
@@ -128,20 +133,21 @@ export function Explainer() {
             ))}
           </div>
 
-          {/* ---- Panels (2244:45) ---- */}
-          <div className="flex w-full flex-col gap-[20px]">
+          <div className="flex w-full flex-col max-md:contents">
             {tabs.map((t, i) => (
               <div
                 key={t.id}
+                className="collapse w-full"
+                data-open={i === active || undefined}
+                style={{ order: i * 2 + 1 }}
+              >
+              <div>
+              <div
                 role="tabpanel"
                 id={`panel-${t.id}`}
                 aria-labelledby={`tab-${t.id}`}
                 tabIndex={0}
-                className={
-                  i === active
-                    ? 'panel-in flex w-full flex-col items-start gap-[16px] rounded-[24px] bg-white p-[36px] max-lg:p-7'
-                    : 'hidden'
-                }
+                className={`${i === active ? 'panel-in ' : ''}flex w-full flex-col items-start gap-[16px] rounded-[24px] bg-white p-[36px] max-lg:p-7`}
               >
                 <h3 className="w-full text-[22px] font-semibold leading-[1.45] text-[#0b1140]">
                   {t.label}
@@ -180,7 +186,11 @@ export function Explainer() {
                   );
                 })}
               </div>
+              <div aria-hidden="true" className="h-[12px] md:hidden" />
+              </div>
+              </div>
             ))}
+          </div>
           </div>
 
           {/* ---- Nav buttons (2244:110) ---- */}

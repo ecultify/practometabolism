@@ -299,9 +299,9 @@ export function WaistPanel() {
           {/* ---- Bento row 2 (2242:363) ---- */}
           <div className="flex w-full items-stretch gap-[24px] max-lg:flex-col">
             {/* Step 3 (2242:364) */}
-            <div className="flex w-[560px] max-w-full shrink-0 items-center gap-[24px] overflow-hidden rounded-[20px] bg-white p-[20px] max-lg:w-full max-sm:flex-col max-sm:items-start">
+            <div className="flex w-[560px] max-w-full shrink-0 items-center gap-[24px] overflow-hidden rounded-[20px] bg-white p-[20px] max-lg:w-full max-sm:flex-col max-sm:items-center">
               <StepThreeIllustration />
-              <div className="flex min-w-0 flex-1 flex-col items-start gap-[8px]">
+              <div className="flex min-w-0 flex-1 flex-col items-start gap-[8px] max-sm:items-center max-sm:text-center">
                 <span className="whitespace-nowrap text-[48px] font-light tracking-[-0.02em] text-[#14bef0]">
                   3
                 </span>
@@ -312,14 +312,14 @@ export function WaistPanel() {
             </div>
 
             {/* Rule of thumb (2242:405) */}
-            <div className="flex min-w-0 flex-1 items-center gap-[24px] overflow-hidden rounded-[20px] bg-[#28328c] px-[28px] py-[24px] max-sm:flex-col max-sm:items-start">
+            <div className="flex min-w-0 flex-1 items-center gap-[24px] overflow-hidden rounded-[20px] bg-[#28328c] px-[28px] py-[24px] max-sm:flex-col max-sm:items-center max-sm:text-center">
               <span
                 aria-hidden="true"
                 className="whitespace-nowrap text-[72px] font-light leading-none text-[#14bef0]"
               >
                 {w.ruleGlyph}
               </span>
-              <div className="flex min-w-0 flex-1 flex-col items-start gap-[6px]">
+              <div className="flex min-w-0 flex-1 flex-col items-start gap-[6px] max-sm:items-center">
                 <p className="whitespace-nowrap text-[18px] font-semibold text-white">
                   {w.ruleTitle}
                 </p>

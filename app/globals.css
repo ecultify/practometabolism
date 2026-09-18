@@ -258,6 +258,14 @@
     }
   }
 
+  /* ---- Nav: one pill slides between journey steps ---- */
+  .nav-pill {
+    transition: transform 360ms var(--ease-out), width 360ms var(--ease-out);
+  }
+  .nav-dot {
+    transition: background-color 200ms var(--ease);
+  }
+
   /* ---- Hero scan (2242:51): line sweeps in from the right edge, the inside
          view follows it, readings surface once it has passed. ---- */
   .scan-line   { animation: scan-line 1100ms var(--ease-out) 250ms both; }
@@ -317,7 +325,7 @@
   .scan-line, .scan-inside, .hero-chip, .step-in, .panel-in, .modal-panel {
     animation: fade 200ms ease both;
   }
-  .rule-draw, .frame-reveal { transition: none; }
+  .rule-draw, .frame-reveal, .nav-pill { transition: none; }
   .rule-draw[data-hidden]:not([data-in]), .frame-reveal[data-hidden]:not([data-in]) {
     transform: none; clip-path: none;
   }
