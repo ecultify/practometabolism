@@ -54,7 +54,7 @@ export function Balance() {
         {/* ---- Habits (2242:621) ---- */}
         <ul className="flex w-full items-start gap-[24px] max-lg:grid max-lg:grid-cols-2 max-sm:grid-cols-1">
           {screen4.cards.map((c) => (
-            <li key={c.title} className="flex min-w-0 flex-1 flex-col items-start gap-[16px]">
+            <li key={c.title} className="flex min-w-0 flex-1 flex-col items-start gap-[16px] max-lg:gap-[8px]">
               {'mosaic' in c && c.mosaic ? (
                 <div
                   className="relative w-full overflow-hidden"
@@ -102,7 +102,7 @@ export function Balance() {
               <h3 className="whitespace-nowrap text-[24px] font-semibold tracking-[-0.005em] text-[#0b1140] max-lg:whitespace-normal">
                 {c.title}
               </h3>
-              <p className="w-[300px] max-w-full text-[16px] leading-[1.6] text-[#2e3766]">
+              <p className="w-[300px] max-w-full text-[16px] leading-[1.6] text-[#2e3766] max-lg:w-full max-lg:leading-[1.5]">
                 <Txt line={c.body} />
               </p>
             </li>

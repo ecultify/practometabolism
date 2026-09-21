@@ -30,13 +30,14 @@ const OUTLINE =
 function flag(id: string, raw: string): boolean | null {
   const f = tool.fields.find((x) => x.id === id);
   if (!f || !raw.trim()) return null;
-  if (Array.isArray(f.limit)) {
-    const m = raw.match(/(\d+(?:\.\d+)?)\s*\/\s*(\d+(?:\.\d+)?)/);
-    if (!m) return null;
-    return Number(m[1]) >= f.limit[0] || Number(m[2]) >= f.limit[1];
+  const limit = f.limit;
+  if (typeof limit === 'number') {
+    const n = Number(raw.replace(/[^\d.]/g, ''));
+    return Number.isFinite(n) && n > 0 ? n >= limit : null;
   }
-  const n = Number(raw.replace(/[^\d.]/g, ''));
-  return Number.isFinite(n) && n > 0 ? n >= f.limit : null;
+  const m = raw.match(/(\d+(?:\.\d+)?)\s*\/\s*(\d+(?:\.\d+)?)/);
+  if (!m) return null;
+  return Number(m[1]) >= limit[0] || Number(m[2]) >= limit[1];
 }
 
 export function AssessmentTool() {

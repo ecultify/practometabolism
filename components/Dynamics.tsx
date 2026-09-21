@@ -100,7 +100,7 @@ export function Dynamics() {
             {screen3.cards.map((c) => (
               <article
                 key={c.title}
-                className="flex min-w-0 flex-1 flex-col items-start gap-[24px] max-md:w-full max-md:gap-[14px]"
+                className="flex min-w-0 flex-1 flex-col items-start gap-[24px] max-lg:gap-[10px] max-md:w-full"
               >
                 <div className="h-[440px] w-full overflow-hidden rounded-[28px] bg-white max-lg:h-[340px] max-md:h-[300px]">
                   {/* eslint-disable-next-line @next/next/no-img-element */}

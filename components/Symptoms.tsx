@@ -74,7 +74,7 @@ function SignCard({
   line: { text: string; refs?: number[] };
 }) {
   return (
-    <li className="flex min-w-0 flex-1 flex-col items-start gap-[18px] max-md:w-full">
+    <li className="flex min-w-0 flex-1 flex-col items-start gap-[18px] max-lg:gap-[10px] max-md:w-full">
       <div className="h-[400px] w-full overflow-hidden rounded-[24px] bg-[#f3f6fc] max-lg:h-[320px]">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
