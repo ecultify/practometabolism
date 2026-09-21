@@ -25,9 +25,9 @@ const gridLines = Array.from({ length: 15 }, (_, i) => 40 + i * 40);
 export function Hero() {
   return (
     <section id="top" className="bg-[#F3F6FC]">
-      <div className="mx-auto flex w-full max-w-[1440px] flex-col items-stretch gap-8 px-6 pt-10 md:px-14 lg:gap-10 lg:flex-row lg:items-center lg:pb-[80px] lg:pt-[40px]">
+      <div className="mx-auto flex w-full max-w-[1440px] flex-col items-stretch gap-8 px-6 pt-10 md:px-14 lg:gap-10 lg:flex-row lg:items-center lg:pb-0 lg:pt-[40px]">
         {/* ---- Copy ---- */}
-        <div className="flex min-w-0 flex-1 flex-col items-start gap-7">
+        <div className="flex min-w-0 flex-1 flex-col items-start gap-7 lg:self-center lg:pb-[80px]">
 
           <h1 className="max-w-[700px] text-[clamp(2.5rem,5.56vw,5rem)] font-light leading-[1.04] tracking-[-0.025em] text-[#0B1140]">
             <TitleLines text={screen1.headline} at={3} />
@@ -56,7 +56,7 @@ export function Hero() {
 
         {/* ---- Split portrait ---- */}
         <div
-          data-reveal className="relative w-full shrink-0 overflow-hidden rounded-[32px] max-lg:-mx-6 max-lg:w-[calc(100%+48px)] max-lg:rounded-b-none max-lg:[aspect-ratio:4/5] md:max-lg:-mx-14 md:max-lg:w-[calc(100%+112px)] lg:w-[600px] lg:[aspect-ratio:600/640]"
+          data-reveal className="relative w-full shrink-0 overflow-hidden rounded-[32px] max-lg:-mx-6 max-lg:w-[calc(100%+48px)] max-lg:rounded-b-none max-lg:[aspect-ratio:4/5] md:max-lg:-mx-14 md:max-lg:w-[calc(100%+112px)] lg:w-[600px] lg:self-end lg:rounded-b-none lg:[aspect-ratio:600/720]"
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
