@@ -122,10 +122,10 @@ export function Explainer() {
                 tabIndex={i === active ? 0 : -1}
                 onClick={() => setActive(i)}
                 style={{ order: i * 2 }}
-                className={`${PILL} px-[22px] py-[11px] text-[15px] font-medium leading-[1.55] max-md:mb-[12px] max-md:self-start ${
+                className={`${PILL} px-[22px] py-[11px] text-[15px] font-medium leading-[1.55] max-md:w-full max-md:text-left ${
                   i === active
-                    ? 'bg-[#28328c] text-white'
-                    : 'bg-white text-[#28328c]'
+                    ? 'bg-[#28328c] text-white max-md:rounded-b-none'
+                    : 'bg-white text-[#28328c] max-md:mb-[12px]'
                 }`}
               >
                 {t.label}
@@ -147,9 +147,9 @@ export function Explainer() {
                 id={`panel-${t.id}`}
                 aria-labelledby={`tab-${t.id}`}
                 tabIndex={0}
-                className={`${i === active ? 'panel-in ' : ''}flex w-full flex-col items-start gap-[16px] rounded-[24px] bg-white p-[36px] max-lg:p-7`}
+                className={`${i === active ? 'panel-in ' : ''}flex w-full flex-col items-start gap-[16px] rounded-[24px] bg-white p-[36px] max-lg:p-7 max-md:rounded-t-none max-md:border max-md:border-solid max-md:border-[#28328c]`}
               >
-                <h3 className="w-full text-[22px] font-semibold leading-[1.45] text-[#0b1140]">
+                <h3 className="w-full text-[22px] font-semibold leading-[1.45] text-[#0b1140] max-md:hidden">
                   {t.label}
                 </h3>
                 {t.blocks.map((b, bi) => {

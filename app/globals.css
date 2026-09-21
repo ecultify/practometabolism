@@ -310,7 +310,7 @@
   .collapse > * { min-height: 0; overflow: hidden; }
 
   .panel-in { animation: panel-in 220ms var(--ease-out) both; }
-  @keyframes panel-in { from { opacity: 0; transform: translateY(4px); filter: blur(3px); } }
+  @keyframes panel-in { from { opacity: 0; transform: translateY(-8px); } }
 
   .step-in { animation: step-in 220ms var(--ease-out) both; }
   @keyframes step-in { from { opacity: 0; transform: translateX(8px); } }

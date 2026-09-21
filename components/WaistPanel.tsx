@@ -95,7 +95,7 @@ function StepThreeIllustration() {
     <div
       aria-hidden="true"
       data-node-id="2242:365"
-      className="relative h-[140px] w-[220px] shrink-0 overflow-hidden rounded-[12px] bg-[#f7fafc]"
+      className="relative h-[140px] w-[220px] shrink-0 overflow-hidden rounded-[12px] bg-[#f7fafc] max-sm:scale-[1.35]"
     >
       {/* tape — 2242:366 */}
       <div
@@ -272,13 +272,15 @@ export function WaistPanel() {
           {/* ---- Bento row 2 (2242:363) ---- */}
           <div className="flex w-full items-stretch gap-[24px] max-lg:flex-col">
             {/* Step 3 (2242:364) */}
-            <div className="flex w-[560px] max-w-full shrink-0 items-center gap-[24px] overflow-hidden rounded-[20px] bg-white p-[20px] max-lg:w-full max-sm:flex-col max-sm:items-center">
-              <StepThreeIllustration />
-              <div className="flex min-w-0 flex-1 flex-col items-start gap-[8px] max-sm:items-center max-sm:text-center">
-                <span className="whitespace-nowrap text-[48px] font-light tracking-[-0.02em] text-[#14bef0]">
+            <div className="flex w-[560px] max-w-full shrink-0 items-center gap-[24px] overflow-hidden rounded-[20px] bg-white p-[20px] max-lg:w-full max-sm:flex-col max-sm:items-start max-sm:gap-[10px]">
+              <div className="flex shrink-0 justify-center overflow-hidden rounded-[12px] bg-[#f7fafc] max-sm:h-[190px] max-sm:w-full max-sm:items-center">
+                <StepThreeIllustration />
+              </div>
+              <div className="flex min-w-0 flex-1 flex-col items-start gap-[8px]">
+                <span className="whitespace-nowrap text-[48px] font-light tracking-[-0.02em] text-[#14bef0] max-sm:text-[40px]">
                   3
                 </span>
-                <p className="min-h-[140px] w-full text-[20px] font-medium leading-[1.5] text-[#0b1140] max-sm:min-h-0">
+                <p className="min-h-[140px] w-full text-[20px] font-medium leading-[1.5] text-[#0b1140] max-sm:min-h-0 max-sm:text-[16px]">
                   {w.steps[2]}
                 </p>
               </div>
