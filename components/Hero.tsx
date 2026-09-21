@@ -11,12 +11,6 @@ const W = 600;
 const H = 800;
 const pct = (v: number, of: number) => `${(v / of) * 100}%`;
 
-const everyday = [
-  { src: '/images/everyday/laces.webp', alt: 'Tying shoelaces before heading out', w: 150, h: 190 },
-  { src: '/images/everyday/cooking.webp', alt: 'Preparing a bowl of food at home', w: 150, h: 150 },
-  { src: '/images/everyday/juice.webp', alt: 'Pouring a glass of fresh juice in a kitchen', w: 150, h: 210 },
-];
-
 // left/top in the 600x800 frame, straight from Figma
 const readings = [
   { label: 'Blood pressure', left: 406, top: 250 },
@@ -58,22 +52,6 @@ export function Hero() {
               {screen1.secondaryCta}
             </a>
           </div>
-
-          <ul className="flex items-end gap-[14px]">
-            {everyday.map((img) => (
-              <li
-                key={img.src}
-                className="shrink-0 overflow-hidden rounded-[18px]"
-                style={{
-                  width: `clamp(88px, ${(img.w / 1440) * 100}vw, ${img.w}px)`,
-                  aspectRatio: `${img.w} / ${img.h}`,
-                }}
-              >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={img.src} alt={img.alt} className="h-full w-full object-cover" />
-              </li>
-            ))}
-          </ul>
         </div>
 
         {/* ---- Split portrait ---- */}
