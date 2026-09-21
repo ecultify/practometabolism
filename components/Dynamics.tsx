@@ -53,15 +53,15 @@ export function Dynamics() {
       <div className="relative mx-auto w-full max-w-[1440px]">
         <div className="relative flex flex-col items-center gap-[72px] px-[56px] py-[120px] max-lg:gap-12 max-lg:px-6 max-lg:py-20">
           {/* ---- Screen 2 ---- */}
-          <p className={EYEBROW}>{screen2.eyebrow}</p>
-
-          <h2 className="w-full text-center text-[clamp(2.25rem,3.89vw,3.5rem)] font-light leading-[1.1] tracking-[-0.02em] text-white">
-            {screen2.headline}
-          </h2>
-
-          <p className="w-full text-center text-[19px] leading-[1.6] text-[#c9d1ee] max-lg:text-[17px]">
-            {screen2.subhead}
-          </p>
+          <div className="flex w-full flex-col items-center gap-[14px]">
+            <p className={EYEBROW}>{screen2.eyebrow}</p>
+            <h2 className="w-full text-center text-[clamp(2.25rem,3.89vw,3.5rem)] font-light leading-[1.1] tracking-[-0.02em] text-white">
+              {screen2.headline}
+            </h2>
+            <p className="w-full text-center text-[19px] leading-[1.6] text-[#c9d1ee] max-lg:text-[17px]">
+              {screen2.subhead}
+            </p>
+          </div>
 
           <div className="flex h-[188px] w-full items-start gap-[24px] overflow-hidden rounded-[28px] border border-solid border-[rgba(255,255,255,0.12)] max-md:h-auto max-md:flex-col max-md:rounded-none max-md:border-0">
             {screen2.cards.map((c) => (
@@ -95,17 +95,18 @@ export function Dynamics() {
           <p className={NOTE}>{screen2.note}</p>
 
           {/* ---- Screen 3 ---- */}
-          <p className={EYEBROW}>{screen3.eyebrow}</p>
-
-          <h2 className="w-full text-center text-[clamp(1.875rem,2.92vw,2.625rem)] font-light leading-[1.25] text-white">
-            {screen3.headline}
-          </h2>
+          <div className="flex w-full flex-col items-center gap-[14px]">
+            <p className={EYEBROW}>{screen3.eyebrow}</p>
+            <h2 className="w-full text-center text-[clamp(1.875rem,2.92vw,2.625rem)] font-light leading-[1.25] text-white">
+              {screen3.headline}
+            </h2>
+          </div>
 
           <div className="flex w-full items-start gap-[32px] max-md:flex-col">
             {screen3.cards.map((c) => (
               <article
                 key={c.title}
-                className="flex min-w-0 flex-1 flex-col items-start gap-[24px] max-md:w-full"
+                className="flex min-w-0 flex-1 flex-col items-start gap-[24px] max-md:w-full max-md:gap-[14px]"
               >
                 <div className="h-[440px] w-full overflow-hidden rounded-[28px] bg-white max-lg:h-[340px] max-md:h-[300px]">
                   {/* eslint-disable-next-line @next/next/no-img-element */}

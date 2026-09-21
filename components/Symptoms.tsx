@@ -101,13 +101,15 @@ export function Symptoms() {
       <div className="mx-auto flex w-full max-w-[1440px] flex-col items-start gap-[72px] px-[56px] py-[120px] max-lg:gap-14 max-lg:px-6 max-lg:py-20">
         {/* ---- Excuses (2242:121) ---- */}
         <div className="flex w-full items-start gap-[56px] max-lg:flex-col max-lg:gap-10">
-          <div className="flex min-w-0 max-w-full flex-1 flex-col items-start gap-[28px] max-lg:w-full">
-            <p className="w-full text-[13px] font-semibold leading-[1.4] tracking-[1.04px] text-[#28328c]">
-              {screen6.eyebrow}
-            </p>
-            <h2 className="w-[760px] max-w-full text-[clamp(2.25rem,3.89vw,3.5rem)] font-light leading-[1.1] tracking-[-0.02em] text-[#0b1140]">
-              {screen6.headline}
-            </h2>
+          <div className="flex min-w-0 max-w-full flex-1 flex-col items-start gap-[20px] max-lg:w-full">
+            <div className="flex w-full flex-col items-start gap-[14px]">
+              <p className="w-full text-[13px] font-semibold leading-[1.4] tracking-[1.04px] text-[#28328c]">
+                {screen6.eyebrow}
+              </p>
+              <h2 className="w-[760px] max-w-full text-[clamp(2.25rem,3.89vw,3.5rem)] font-light leading-[1.1] tracking-[-0.02em] text-[#0b1140]">
+                {screen6.headline}
+              </h2>
+            </div>
             <p className="w-[520px] max-w-full text-[19px] leading-[1.6] text-[#4a5487] max-lg:text-[17px]">
               {screen6.subhead}
             </p>

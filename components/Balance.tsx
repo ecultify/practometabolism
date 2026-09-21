@@ -98,6 +98,7 @@ export function Balance() {
                     loading="lazy"
                     decoding="async"
                     className="h-full w-full object-cover"
+                    style={c.image.includes('stress') ? { objectPosition: '72% 30%' } : undefined}
                   />
                 </div>
               )}

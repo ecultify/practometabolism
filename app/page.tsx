@@ -7,6 +7,7 @@ import { Hero } from '@/components/Hero';
 import { MeasuresBand } from '@/components/MeasuresBand';
 import { NextSteps } from '@/components/NextSteps';
 import { Numbers } from '@/components/Numbers';
+import { References } from '@/components/References';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteNav } from '@/components/SiteNav';
 import { Symptoms } from '@/components/Symptoms';
@@ -28,6 +29,7 @@ export default function Page() {
         <AssessmentTool />     {/* Screen 7 */}
         <Doctor />             {/* Screen 8 */}
         <NextSteps />          {/* Screen 9 + interstitial */}
+        <References />
       </main>
       <SiteFooter />
     </>

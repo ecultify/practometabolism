@@ -91,14 +91,16 @@ export function NextSteps() {
           <div className="relative flex flex-col items-start gap-[72px] px-[56px] pb-[120px] pt-[140px] max-lg:gap-12 max-lg:px-6 max-lg:pb-20 max-lg:pt-24">
             {/* ---- Main (2242:648) ---- */}
             <div className="flex w-full items-start gap-[80px] max-lg:flex-col max-lg:gap-10">
-              <div className="flex w-[460px] max-w-full shrink-0 flex-col items-start gap-[28px] pt-[16px] max-lg:w-full max-lg:pt-0">
-                <p className="whitespace-nowrap text-[13px] font-semibold leading-[1.4] tracking-[1.04px] text-[#8fe3fa]">
-                  {screen9.eyebrow}
-                </p>
-                <h2 className="w-[460px] max-w-full text-[clamp(1.875rem,2.78vw,2.5rem)] font-light leading-[1.1] tracking-[-0.02em] text-white">
-                  <span className="block">Choose what you would like</span>
-                  <span className="block">to explore next</span>
-                </h2>
+              <div className="flex w-[460px] max-w-full shrink-0 flex-col items-start gap-[20px] pt-[16px] max-lg:w-full max-lg:pt-0">
+                <div className="flex w-full flex-col items-start gap-[14px]">
+                  <p className="whitespace-nowrap text-[13px] font-semibold leading-[1.4] tracking-[1.04px] text-[#8fe3fa]">
+                    {screen9.eyebrow}
+                  </p>
+                  <h2 className="w-[460px] max-w-full text-[clamp(1.875rem,2.78vw,2.5rem)] font-light leading-[1.1] tracking-[-0.02em] text-white">
+                    <span className="block">Choose what you would like</span>
+                    <span className="block">to explore next</span>
+                  </h2>
+                </div>
                 <p className="w-[460px] max-w-full text-[13px] italic leading-[1.65] text-[#c9d1ee]">
                   {screen9.note}
                 </p>
