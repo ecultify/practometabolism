@@ -27,7 +27,6 @@ import { ArrowChip, Txt } from './ui';
 
 const EYEBROW =
   'w-full text-center text-[13px] font-semibold leading-[1.4] tracking-[1.04px] text-[#8fe3fa]';
-const NOTE = 'w-full text-center text-[12px] italic leading-[1.5] text-[#8fa0d9]';
 
 function Dot() {
   return (
@@ -92,7 +91,6 @@ export function Dynamics() {
             <ArrowChip />
           </a>
 
-          <p className={NOTE}>{screen2.note}</p>
 
           {/* ---- Screen 3 ---- */}
           <div className="flex w-full flex-col items-center gap-[14px]">
@@ -128,7 +126,6 @@ export function Dynamics() {
             ))}
           </div>
 
-          <p className={NOTE}>{screen3.note}</p>
         </div>
       </div>
     </section>

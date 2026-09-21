@@ -328,12 +328,6 @@ export function WaistPanel() {
             </div>
           </div>
 
-          {/* ---- Bento row 3 (2242:410) ---- */}
-          <div className="flex w-full items-center justify-between overflow-hidden pt-[16px]">
-            <p className="w-[820px] max-w-full text-[13px] leading-[1.6] text-[#4a5487]">
-              {w.footnote}
-            </p>
-          </div>
         </div>
       </div>
     </section>

@@ -42,7 +42,7 @@ export function Hero() {
             {screen1.headline}
           </h1>
 
-          <p className="max-w-[560px] text-[clamp(1rem,1.32vw,1.1875rem)] leading-[1.6] text-[#2E3766]">
+          <p className="max-w-[560px] whitespace-pre-line text-[clamp(1rem,1.32vw,1.1875rem)] leading-[1.6] text-[#2E3766]">
             {screen1.subhead}
           </p>
 

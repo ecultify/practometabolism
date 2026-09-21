@@ -28,9 +28,9 @@ export function MeasuresBand() {
       className="bg-[#0b1140]"
     >
       <div className="mx-auto flex w-full max-w-[1440px] items-center gap-[48px] px-[56px] py-[40px] max-lg:flex-col max-lg:items-start max-lg:gap-[28px] max-lg:px-6 max-lg:py-8">
-      <div className="flex shrink-0 flex-col gap-[8px] whitespace-nowrap max-lg:whitespace-normal">
+      <div className="flex w-[560px] max-w-full shrink-0 flex-col gap-[8px]">
         <p className="text-[14px] font-medium leading-normal text-[#8fa0d9]">{band.eyebrow}</p>
-        <p className="text-[clamp(2.5rem,4.44vw,4rem)] font-light leading-normal tracking-[-0.02em] text-white">
+        <p className="text-[clamp(2rem,3.33vw,3rem)] font-light leading-[1.1] tracking-[-0.02em] text-white">
           {band.headline}
         </p>
         <p className="text-[15px] italic leading-[1.5] text-[#8fa0d9]">{band.caption}</p>

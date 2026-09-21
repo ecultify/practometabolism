@@ -28,7 +28,7 @@ export const screen1 = {
   eyebrow: 'Internal health awareness',
   headline: 'Health starts with you.',
   subhead:
-    'Underneath the everyday things, like what you eat, how you move and how you sleep, your body is always managing sugar, fat and energy. That is what we mean by internal health. It is not one test or one number. It is all of these working together.',
+    'Every day, your body is handling sugar, fat and energy.\n\nBlood sugar, cholesterol, blood pressure, waist circumference and body weight can each tell you something about how that is going.\n\nBut no single measure tells the whole story.',
   primaryCta: 'Know More',
   secondaryCta: 'Take the risk assessment',
   readings: [
@@ -43,8 +43,8 @@ export const screen1 = {
 
 export const band = {
   eyebrow: 'Internal health covers',
-  headline: 'Five measures',
-  caption: 'No single one tells the whole story',
+  headline: 'FIVE MEASURES. ONE BIGGER PICTURE.',
+  caption: 'Each tells you something. Together, they tell you more.',
   listLabel: 'What it includes',
   measures: [
     'Blood sugar',
@@ -56,7 +56,7 @@ export const band = {
 };
 
 export const explainer = {
-  headline: 'Understand your internal health',
+  headline: 'Understand what your health numbers mean together',
   subhead: 'What internal health is, what it includes, and why it matters. A 2-minute read.',
   openLabel: 'Read +',
   closeLabel: 'Close –',
@@ -67,12 +67,18 @@ export const explainer = {
   tabs: [
     {
       id: 'what',
-      label: '1. What is internal health?',
+      label: '1. Why these numbers matter?',
       blocks: [
         {
           kind: 'body' as const,
           line: {
-            text: 'Internal health is how well your body handles the sugar, fat and energy it gets from food, day to day. It is an umbrella term. It is not one condition and it is not one number. Several everyday health measures together help show the picture.',
+            text: 'Your body is constantly handling sugar, fat and energy. Blood sugar, blood fats, blood pressure, waist circumference and weight each show a different part of that process.',
+          },
+        },
+        {
+          kind: 'body' as const,
+          line: {
+            text: 'Looking at them together gives you a more complete picture than any one number alone.',
             refs: [1],
           },
         },
@@ -80,37 +86,37 @@ export const explainer = {
     },
     {
       id: 'inclusions',
-      label: '2. Inclusions & exclusions',
+      label: '2. What the picture includes',
       blocks: [
-        { kind: 'subhead' as const, line: { text: 'Includes things like' } },
+        { kind: 'subhead' as const, line: { text: 'Key measures' } },
         {
           kind: 'list' as const,
           items: [
             { text: 'Blood sugar' },
-            { text: 'Cholesterol and triglycerides' },
+            { text: 'Cholesterol & triglycerides' },
             { text: 'Blood pressure' },
+            { text: 'Waist circumference' },
             { text: 'Body weight' },
-            { text: 'Waist circumference, which shows where the body stores fat' },
           ],
         },
-        { kind: 'subhead' as const, line: { text: 'Does not mean' } },
+        { kind: 'subhead' as const, line: { text: 'What it does not mean' } },
         {
           kind: 'list' as const,
           items: [
-            { text: 'Any one of these measures on its own' },
-            { text: 'The same thing as body weight' },
+            { text: 'Any one measure tells the whole story' },
+            { text: 'Body weight alone defines your health' },
             {
-              text: 'Something only people who are overweight need to think about. Changes can also happen at a healthy weight.',
+              text: 'Only people above a healthy weight need to pay attention. Changes can occur at a healthy weight too.',
               refs: [2],
             },
-            { text: 'A diagnosis. Only a doctor can tell you what your own numbers mean.' },
+            { text: 'These numbers are a diagnosis. A doctor can help interpret what they mean for you.' },
           ],
         },
       ],
     },
     {
       id: 'benefits',
-      label: '3. Benefits of good internal health',
+      label: '3. When your numbers are in a healthy range',
       blocks: [
         { kind: 'body' as const, line: { text: 'When these measures stay in a healthy range, it is linked with:' } },
         {
@@ -125,10 +131,9 @@ export const explainer = {
     },
     {
       id: 'downstream',
-      label: '4. Downstream effects',
+      label: '4. When several numbers shift',
       blocks: [
-        { kind: 'subhead' as const, line: { text: 'If internal health is not in good shape' } },
-        { kind: 'body' as const, line: { text: 'Over time, it can influence the risk of:' } },
+        { kind: 'body' as const, line: { text: 'Changes across key health measures can be linked with a higher long-term risk of:' } },
         {
           kind: 'list' as const,
           items: [
@@ -136,13 +141,6 @@ export const explainer = {
             { text: 'Heart and blood vessel disease', refs: [1] },
             { text: 'Fatty liver disease', refs: [3] },
           ],
-        },
-        {
-          kind: 'body' as const,
-          line: {
-            text: 'These conditions often occur together, which is why the measures are usually looked at as a group.',
-            refs: [1],
-          },
         },
       ],
     },
@@ -152,17 +150,17 @@ export const explainer = {
 export const screen2 = {
   eyebrow: 'Internal health matters',
   headline: 'Take a closer look at your health',
-  subhead: 'Looking beyond weight to overall wellbeing.',
+  subhead: 'Looking beyond weight to overall well-being.',
   cards: [
     {
-      title: 'Benefits: good internal health is linked with',
+      title: 'When key measures stay in healthy ranges',
       items: [
         { text: 'A lower long-term risk of type 2 diabetes', refs: [1] },
         { text: 'A lower long-term risk of heart and blood vessel disease', refs: [1] },
       ],
     },
     {
-      title: 'Downstream effects: poor internal health can influence the risk of',
+      title: 'When several measures begin to shift',
       items: [
         { text: 'Type 2 diabetes', refs: [1] },
         { text: 'Heart and blood vessel disease, and other related conditions', refs: [1, 3] },
@@ -201,7 +199,7 @@ export const screen3 = {
 
 export const screen4 = {
   eyebrow: 'What shapes internal health',
-  headline: 'Health in balance',
+  headline: 'What you do every day can influence the bigger picture.',
   subhead: 'Support your health with nutrition, activity, sleep, and regular checks.',
   cards: [
     {
@@ -230,7 +228,7 @@ export const screen4 = {
     },
     {
       title: 'Do not ignore stress',
-      body: { text: 'Long-term stress has been linked with changes in internal health.', refs: [10] },
+      body: { text: 'Long-term stress can influence blood sugar and other key health measures over time.', refs: [10] },
       image: '/images/habits/stress.webp',
       alt: 'A person pausing at a desk during a long day',
     },
@@ -242,7 +240,7 @@ export const screen4 = {
 export const screen5 = {
   eyebrow: 'Know your health numbers',
   headline: 'Every number tells a story',
-  subhead: 'Know the health measures that shape your future wellbeing.',
+  subhead: 'Know the health measures that shape your future well-being.',
   body: 'Know your health numbers: blood sugar, cholesterol, blood pressure, waist circumference matter.',
   measures: [
     { title: 'Blood sugar — HbA1c & blood glucose', body: { text: 'HbA1c reflects your average blood sugar over roughly the past three months.', refs: [5] } },
@@ -326,15 +324,15 @@ export const screen6 = {
 export const screen7 = {
   eyebrow: 'Risk assessment tool',
   headline: 'Check what matters',
-  subhead: 'Know your key health measures and discuss them with a doctor.',
-  body: 'This short self-assessment has eight questions and takes about 2 minutes. Nothing is saved or sent anywhere.',
-  heading: 'Internal health check · 8 questions · about 2 minutes · no sign-in',
+  subhead: 'Answer 8 quick questions to understand which areas may be worth discussing with a doctor.',
+  body: 'Takes about 2 minutes. No sign-in required. Your responses are not saved or sent anywhere.',
+  heading: '8 questions • about 2 minutes • no sign-in',
   disclaimer:
     'This screening tool is for health awareness and educational purposes only and does not promote any specific product, treatment, or brand. Your results are indicative only and do NOT constitute a medical diagnosis. This tool does not diagnose, treat, cure, mitigate, or prevent any disease or condition. Always consult a qualified healthcare professional for proper evaluation and diagnosis before making any health-related decisions. © 2026 Practo Technologies Private Limited.',
   intro: [
     {
       title: 'What this tool is for',
-      body: 'Showing which everyday factors are linked with internal health, and what you could talk about with a doctor.',
+      body: 'Everyday factors and key health measures that may be worth discussing with a doctor.',
     },
     {
       title: 'What it does not do',

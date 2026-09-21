@@ -137,11 +137,6 @@ export function Doctor() {
             </p>
           </div>
 
-          <div className="flex w-full items-center overflow-hidden">
-            <p className="min-w-0 flex-1 text-[12px] italic leading-[1.5] text-[#6b75a8]">
-              {screen8.note}
-            </p>
-          </div>
         </div>
       </div>
     </section>

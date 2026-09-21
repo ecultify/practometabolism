@@ -44,7 +44,6 @@ export function Numbers() {
           </div>
           <div className="flex w-[488px] max-w-full flex-col items-start gap-[14px] leading-[1.6]">
             <p className="w-full text-[18px] text-[#2e3766]">{screen5.subhead}</p>
-            <p className="w-full text-[15px] text-[#4a5487]">{screen5.body}</p>
           </div>
         </div>
 
@@ -81,7 +80,6 @@ export function Numbers() {
           <div className="flex w-full flex-col items-center justify-center overflow-hidden rounded-[16px] bg-white px-[22px] py-[20px]">
             <p className="w-full text-center text-[13px] leading-[1.65] text-[#4a5487]">{screen5.closing}</p>
           </div>
-          <p className="w-full text-[12px] italic leading-[1.5] text-[#6b75a8]">{screen5.note}</p>
         </div>
       </div>
     </section>

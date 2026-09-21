@@ -220,7 +220,6 @@ export function Explainer() {
             </button>
           </div>
 
-          <p className="w-full text-[12px] italic leading-[1.5] text-[#6b75a8]">{explainer.note}</p>
           </div>
         </div>
       </div>
