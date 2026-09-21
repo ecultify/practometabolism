@@ -345,13 +345,6 @@ export function AssessmentTool() {
           </div>
         </div>
 
-        {/* ---------- Tool footer (2242:555) ---------- */}
-        <div className="flex w-full items-center justify-between overflow-hidden">
-          <div className="flex flex-col items-start gap-[6px]">
-            <p className="w-full text-[14px] font-medium text-[#1e2a78]">{t.imageNote}</p>
-            <p className="w-full text-[13px] text-[#4a5487]">{t.note}</p>
-          </div>
-        </div>
       </div>
     </section>
   );
