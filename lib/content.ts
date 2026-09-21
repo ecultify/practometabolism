@@ -348,6 +348,10 @@ export const screen7 = {
   next: 'Next →',
   seeSummary: 'See my summary →',
   startAgain: 'Start again',
+  createSummary: 'Create my summary',
+  optionalNote: 'Every field is optional. No name, contact or identity is collected.',
+  optionalSub: 'No score, no percentage, no risk band, no colour rating. “Worth mentioning” is a prompt to raise it with a doctor, not a verdict.',
+  emptySummary: 'Your summary appears here as you answer the questions.',
   questions: [
     {
       id: 'activity',
