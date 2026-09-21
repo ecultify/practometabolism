@@ -79,11 +79,11 @@ export function AssessmentTool() {
           <h2 className="w-[900px] max-w-full text-center text-[clamp(2.25rem,3.89vw,3.5rem)] font-light leading-[1.1] tracking-[-0.02em] text-[#0b1140]">
             <TitleLines text={t.headline} at={1} />
           </h2>
-          <p className="w-[760px] max-w-full text-center text-[18px] leading-[1.6] text-[#2e3766]">{t.subhead}</p>
-          <p className="w-[760px] max-w-full text-center text-[15px] leading-[1.65] text-[#4a5487]">{t.body}</p>
+          <p data-reveal className="w-[760px] max-w-full text-center text-[18px] leading-[1.6] text-[#2e3766]">{t.subhead}</p>
+          <p data-reveal className="w-[760px] max-w-full text-center text-[15px] leading-[1.65] text-[#4a5487]">{t.body}</p>
         </div>
 
-        <p className="shrink-0 overflow-hidden rounded-[999px] bg-[#eaf8fe] px-[22px] py-[10px] text-[14px] font-semibold leading-[1.5] text-[#28328c] max-sm:text-center">
+        <p data-reveal className="shrink-0 overflow-hidden rounded-[999px] bg-[#eaf8fe] px-[22px] py-[10px] text-[14px] font-semibold leading-[1.5] text-[#28328c] max-sm:text-center">
           {t.heading}
         </p>
 
@@ -92,6 +92,7 @@ export function AssessmentTool() {
         {/* ---------- Tool card ---------- */}
         <div className="flex w-full flex-col gap-[24px] pt-[12px]">
           <div
+            data-reveal
             className="flex w-full items-stretch overflow-hidden rounded-[32px] bg-white max-lg:flex-col"
             style={{ boxShadow: '0px 30px 60px 0px rgba(10,18,64,0.1)' }}
           >

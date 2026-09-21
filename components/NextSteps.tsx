@@ -97,7 +97,7 @@ export function NextSteps() {
                     <TitleLines text="Choose what you would like to explore next" at={5} dark />
                   </h2>
                 </div>
-                <p className="w-[460px] max-w-full text-[13px] italic leading-[1.65] text-[#c9d1ee]">
+                <p data-reveal className="w-[460px] max-w-full text-[13px] italic leading-[1.65] text-[#c9d1ee]">
                   {screen9.note}
                 </p>
               </div>
@@ -106,6 +106,7 @@ export function NextSteps() {
                 {screen9.options.map((o) => (
                   <li
                     key={o.id}
+                    data-reveal
                     className="flex w-full flex-col items-start gap-[14px] overflow-hidden rounded-[24px] bg-[#131a4d] p-[32px] max-sm:p-6"
                   >
                     <h3 className="w-full text-[22px] font-semibold leading-[1.45] text-white">
@@ -129,7 +130,7 @@ export function NextSteps() {
             </div>
 
             {/* ---- Approved line (2242:680) ---- */}
-            <div className="flex w-full items-start gap-[24px] overflow-hidden border-t border-solid border-[rgba(255,255,255,0.15)] pt-[40px]">
+            <div data-reveal className="flex w-full items-start gap-[24px] overflow-hidden border-t border-solid border-[rgba(255,255,255,0.15)] pt-[40px]">
               <span
                 aria-hidden="true"
                 className="shrink-0 whitespace-nowrap text-[96px] font-bold leading-[70px] text-[#14bef0] max-sm:text-[64px] max-sm:leading-[48px]"

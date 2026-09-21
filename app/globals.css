@@ -309,6 +309,8 @@
   }
   .collapse > * { min-height: 0; overflow: hidden; }
 
+  header[data-scrolled] { box-shadow: 0 8px 30px rgba(11,17,64,0.08); }
+
   .panel-in { animation: panel-in 220ms var(--ease-out) both; }
   @keyframes panel-in { from { opacity: 0; transform: translateY(-8px); } }
 

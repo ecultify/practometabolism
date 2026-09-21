@@ -57,6 +57,7 @@ export function Doctor() {
         {/* ---- Left (2242:563) ---- */}
         <div className="flex w-[640px] max-w-full shrink-0 flex-col items-start gap-[24px] max-lg:w-full">
           <div
+            data-reveal-img
             className="w-full overflow-hidden rounded-[32px] bg-[#f3f6fc]"
             style={{ aspectRatio: '640 / 540' }}
           >
@@ -70,7 +71,7 @@ export function Doctor() {
             />
           </div>
 
-          <div className="flex w-full flex-col items-start gap-[12px] overflow-hidden rounded-[28px] bg-[#f3f6fc] p-[28px] max-sm:p-5">
+          <div data-reveal className="flex w-full flex-col items-start gap-[12px] overflow-hidden rounded-[28px] bg-[#f3f6fc] p-[28px] max-sm:p-5">
             <div className="flex w-full items-end gap-[10px]">
               <span
                 aria-hidden="true"
@@ -101,7 +102,7 @@ export function Doctor() {
             </h2>
           </div>
 
-          <p className="w-full text-[19px] leading-[1.6] text-[#2e3766] max-lg:text-[17px]">
+          <p data-reveal className="w-full text-[19px] leading-[1.6] text-[#2e3766] max-lg:text-[17px]">
             {screen8.intro}
           </p>
 
@@ -109,6 +110,7 @@ export function Doctor() {
             {screen8.list.map((l) => (
               <li
                 key={l}
+                data-reveal
                 className="flex w-full items-center gap-[16px] overflow-hidden border-b border-solid border-[#e4e8f4] py-[14px]"
               >
                 <Check />
@@ -121,6 +123,7 @@ export function Doctor() {
 
           <div
             role="note"
+            data-reveal
             className="flex w-full items-center gap-[14px] overflow-hidden rounded-[16px] border border-solid border-[#f3a26b] bg-[#fff4ec] px-[20px] py-[16px]"
           >
             <span

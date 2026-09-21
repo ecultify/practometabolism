@@ -67,7 +67,7 @@ function SignCard({
 }) {
   return (
     <li className="flex min-w-0 flex-1 flex-col items-start gap-[18px] max-lg:gap-[10px] max-md:w-full">
-      <div className="h-[400px] w-full overflow-hidden rounded-[24px] bg-[#f3f6fc] max-lg:h-[320px]">
+      <div data-reveal-img className="h-[400px] w-full overflow-hidden rounded-[24px] bg-[#f3f6fc] max-lg:h-[320px]">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={image}
@@ -77,7 +77,7 @@ function SignCard({
           className="h-full w-full object-cover"
         />
       </div>
-      <div className="flex w-full items-start gap-[12px]">
+      <div data-reveal className="flex w-full items-start gap-[12px]">
         <Marker />
         <p className="min-w-0 flex-1 text-[19px] font-medium leading-[1.45] text-[#0b1140]">
           <Txt line={line} />
@@ -99,7 +99,7 @@ export function Symptoms() {
                 <TitleLines text={screen6.headline} at={1} />
               </h2>
             </div>
-            <p className="w-[520px] max-w-full text-[19px] leading-[1.6] text-[#4a5487] max-lg:text-[17px]">
+            <p data-reveal className="w-[520px] max-w-full text-[19px] leading-[1.6] text-[#4a5487] max-lg:text-[17px]">
               {screen6.subhead}
             </p>
 
@@ -107,6 +107,7 @@ export function Symptoms() {
               {screen6.quotes.map((q, i) => (
                 <div key={q} className="contents">
                   <p
+                    data-reveal
                     className="quote-row text-[clamp(1.5rem,3.06vw,2.75rem)] font-medium italic tracking-[-0.01em] text-[#28328c] lg:whitespace-nowrap"
                     style={{ '--q-indent': `${quoteLayout[i].indent}px` } as React.CSSProperties}
                   >
@@ -133,6 +134,7 @@ export function Symptoms() {
             style={{ aspectRatio: `${C_W} / ${C_H}` }}
           >
             <div
+              data-reveal-img
               className="absolute overflow-hidden rounded-[28px] bg-[#f3f6fc]"
               style={{ left: p(120, C_W), top: 0, width: p(300, C_W), height: p(440, C_H) }}
             >
@@ -146,6 +148,7 @@ export function Symptoms() {
               />
             </div>
             <div
+              data-reveal-img
               className="absolute overflow-hidden rounded-[24px] border-[8px] border-solid border-white bg-[#f3f6fc]"
               style={{
                 left: 0,
@@ -168,7 +171,7 @@ export function Symptoms() {
 
         {/* ---- Four signs (2242:141) ---- */}
         <div className="flex w-full flex-col items-start gap-[28px]">
-          <h3 className={HEAD}>{screen6.signsHeading}</h3>
+          <h3 data-reveal className={HEAD}>{screen6.signsHeading}</h3>
 
           <ul className="flex w-full items-start gap-[24px] max-md:flex-col">
             {screen6.signs.map((s) => (
@@ -176,7 +179,7 @@ export function Symptoms() {
             ))}
           </ul>
 
-          <h3 className={HEAD}>{screen6.otherHeading}</h3>
+          <h3 data-reveal className={HEAD}>{screen6.otherHeading}</h3>
 
           <ul className="flex w-full items-start gap-[24px] max-md:flex-col">
             {screen6.other.map((s) => (
@@ -187,7 +190,7 @@ export function Symptoms() {
 
         {/* ---- Closing line (2242:166) ---- */}
         <div className="flex w-full items-center justify-between overflow-hidden border-t border-solid border-[#e4e8f4] pt-[36px]">
-          <p className="w-full text-[20px] leading-[1.6] text-[#2e3766] max-lg:text-[18px]">
+          <p data-reveal className="w-full text-[20px] leading-[1.6] text-[#2e3766] max-lg:text-[18px]">
             <Txt line={screen6.closing} />
           </p>
         </div>

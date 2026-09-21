@@ -33,11 +33,11 @@ export function Hero() {
             <TitleLines text={screen1.headline} at={3} />
           </h1>
 
-          <p className="max-w-[560px] whitespace-pre-line text-[clamp(1rem,1.32vw,1.1875rem)] leading-[1.6] text-[#2E3766]">
+          <p data-reveal className="max-w-[560px] whitespace-pre-line text-[clamp(1rem,1.32vw,1.1875rem)] leading-[1.6] text-[#2E3766]">
             {screen1.subhead}
           </p>
 
-          <div className="flex flex-wrap items-center gap-4">
+          <div data-reveal className="flex flex-wrap items-center gap-4">
             <a
               href="#understand"
               className="btn btn-primary flex items-center gap-[18px] rounded-full bg-[#28328C] py-2.5 pl-[26px] pr-2.5 text-[18px] font-semibold text-white"
@@ -56,7 +56,7 @@ export function Hero() {
 
         {/* ---- Split portrait ---- */}
         <div
-          className="relative w-full shrink-0 overflow-hidden rounded-[32px] max-lg:-mx-6 max-lg:w-[calc(100%+48px)] max-lg:rounded-b-none max-lg:[aspect-ratio:4/5] md:max-lg:-mx-14 md:max-lg:w-[calc(100%+112px)] lg:w-[600px] lg:[aspect-ratio:600/640]"
+          data-reveal className="relative w-full shrink-0 overflow-hidden rounded-[32px] max-lg:-mx-6 max-lg:w-[calc(100%+48px)] max-lg:rounded-b-none max-lg:[aspect-ratio:4/5] md:max-lg:-mx-14 md:max-lg:w-[calc(100%+112px)] lg:w-[600px] lg:[aspect-ratio:600/640]"
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img

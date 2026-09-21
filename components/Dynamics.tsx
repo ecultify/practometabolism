@@ -54,7 +54,7 @@ export function Dynamics() {
             <h2 className="w-full text-center text-[clamp(2.25rem,3.89vw,3.5rem)] font-light leading-[1.1] tracking-[-0.02em] text-white">
               <TitleLines text={screen2.headline} at={4} dark />
             </h2>
-            <p className="w-full text-center text-[19px] leading-[1.6] text-[#c9d1ee] max-lg:text-[17px]">
+            <p data-reveal className="w-full text-center text-[19px] leading-[1.6] text-[#c9d1ee] max-lg:text-[17px]">
               {screen2.subhead}
             </p>
           </div>
@@ -63,6 +63,7 @@ export function Dynamics() {
             {screen2.cards.map((c) => (
               <div
                 key={c.title}
+                data-reveal
                 className="flex h-full min-w-0 flex-1 flex-col items-start gap-[14px] overflow-hidden rounded-[28px] border border-solid border-[rgba(255,255,255,0.12)] bg-[#131a4d] p-[28px] max-md:h-auto max-md:w-full"
               >
                 <p className="w-full text-[18px] font-semibold leading-[1.5] text-white">
@@ -82,6 +83,7 @@ export function Dynamics() {
 
           <a
             href="#understand"
+            data-reveal
             className="btn flex shrink-0 items-center gap-[18px] overflow-hidden rounded-[999px] bg-white py-[10px] pl-[26px] pr-[10px] text-[18px] font-semibold text-[#28328c]"
           >
             {screen2.cta}
@@ -102,7 +104,7 @@ export function Dynamics() {
                 key={c.title}
                 className="flex min-w-0 flex-1 flex-col items-start gap-[24px] max-lg:gap-[10px] max-md:w-full"
               >
-                <div className="h-[440px] w-full overflow-hidden rounded-[28px] bg-white max-lg:h-[340px] max-md:h-[300px]">
+                <div data-reveal-img className="h-[440px] w-full overflow-hidden rounded-[28px] bg-white max-lg:h-[340px] max-md:h-[300px]">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={c.image}
@@ -112,10 +114,10 @@ export function Dynamics() {
                     className="h-full w-full object-cover"
                   />
                 </div>
-                <h3 className="whitespace-nowrap text-[28px] font-semibold text-white max-md:whitespace-normal">
+                <h3 data-reveal className="whitespace-nowrap text-[28px] font-semibold text-white max-md:whitespace-normal">
                   {c.title}
                 </h3>
-                <p className="w-[600px] max-w-full text-[18px] leading-[1.65] text-[#c9d1ee]">
+                <p data-reveal className="w-[600px] max-w-full text-[18px] leading-[1.65] text-[#c9d1ee]">
                   <Txt line={c.body} />
                 </p>
               </article>

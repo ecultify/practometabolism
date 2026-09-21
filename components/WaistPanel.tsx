@@ -236,7 +236,7 @@ export function WaistPanel() {
                 <TitleLines text={`${line1} ${line2}`} at={3} />
               </h2>
 
-              <p className="w-[620px] max-w-full text-[19px] leading-[1.6] text-[#2e3766] max-lg:text-[17px]">
+              <p data-reveal className="w-[620px] max-w-full text-[19px] leading-[1.6] text-[#2e3766] max-lg:text-[17px]">
                 {w.disclaimer}
               </p>
 
@@ -245,6 +245,7 @@ export function WaistPanel() {
                 {w.steps.slice(0, 2).map((s, i) => (
                   <li
                     key={s}
+                    data-reveal
                     className="flex h-full min-w-0 flex-1 flex-col items-start gap-[10px] self-stretch rounded-[20px] bg-white p-[20px] max-sm:w-full"
                   >
                     <div className="min-h-[170px] w-full flex-1 overflow-hidden rounded-[12px] bg-white">
@@ -272,7 +273,7 @@ export function WaistPanel() {
           {/* ---- Bento row 2 (2242:363) ---- */}
           <div className="flex w-full items-stretch gap-[24px] max-lg:flex-col">
             {/* Step 3 (2242:364) */}
-            <div className="flex w-[560px] max-w-full shrink-0 items-center gap-[24px] overflow-hidden rounded-[20px] bg-white p-[20px] max-lg:w-full max-sm:flex-col max-sm:items-start max-sm:gap-[10px]">
+            <div data-reveal className="flex w-[560px] max-w-full shrink-0 items-center gap-[24px] overflow-hidden rounded-[20px] bg-white p-[20px] max-lg:w-full max-sm:flex-col max-sm:items-start max-sm:gap-[10px]">
               <div className="flex shrink-0 justify-center overflow-hidden rounded-[12px] bg-[#f7fafc] max-sm:h-[190px] max-sm:w-full max-sm:items-center">
                 <StepThreeIllustration />
               </div>
@@ -287,7 +288,7 @@ export function WaistPanel() {
             </div>
 
             {/* Rule of thumb (2242:405) */}
-            <div className="flex min-w-0 flex-1 items-center gap-[24px] overflow-hidden rounded-[20px] bg-[#28328c] px-[28px] py-[24px] max-sm:flex-col max-sm:items-center max-sm:text-center">
+            <div data-reveal className="flex min-w-0 flex-1 items-center gap-[24px] overflow-hidden rounded-[20px] bg-[#28328c] px-[28px] py-[24px] max-sm:flex-col max-sm:items-center max-sm:text-center">
               <span
                 aria-hidden="true"
                 className="whitespace-nowrap text-[72px] font-light leading-none text-[#14bef0]"

@@ -38,7 +38,7 @@ export function Balance() {
             </h2>
           </div>
           <div className="flex w-[488px] max-w-full flex-col items-start">
-            <p className="w-full text-[19px] leading-[1.6] text-[#2e3766] max-lg:text-[17px]">
+            <p data-reveal className="w-full text-[19px] leading-[1.6] text-[#2e3766] max-lg:text-[17px]">
               {screen4.subhead}
             </p>
           </div>
@@ -49,6 +49,7 @@ export function Balance() {
           {screen4.cards.map((c) => (
             <li key={c.title} className="flex min-w-0 flex-1 flex-col items-start gap-[16px] max-lg:gap-[8px]">
               <div
+                  data-reveal-img
                   className="w-full overflow-hidden rounded-[24px] bg-[#F3F6FC]"
                   style={{ aspectRatio: `${BOX_W} / ${BOX_H}` }}
                 >
@@ -62,10 +63,10 @@ export function Balance() {
                     style={c.image.includes('stress') ? { objectPosition: '72% 30%' } : undefined}
                   />
                 </div>
-              <h3 className="whitespace-nowrap text-[24px] font-semibold tracking-[-0.005em] text-[#0b1140] max-lg:whitespace-normal">
+              <h3 data-reveal className="whitespace-nowrap text-[24px] font-semibold tracking-[-0.005em] text-[#0b1140] max-lg:whitespace-normal">
                 {c.title}
               </h3>
-              <p className="w-[300px] max-w-full text-[16px] leading-[1.6] text-[#2e3766] max-lg:w-full max-lg:leading-[1.5]">
+              <p data-reveal className="w-[300px] max-w-full text-[16px] leading-[1.6] text-[#2e3766] max-lg:w-full max-lg:leading-[1.5]">
                 <Txt line={c.body} />
               </p>
             </li>
@@ -73,7 +74,7 @@ export function Balance() {
         </ul>
 
         {/* ---- Closing (2242:641) ---- */}
-        <div className="flex w-full items-center justify-between overflow-hidden rounded-[24px] bg-[#f3f6fc] px-[32px] py-[28px] max-lg:px-6 max-lg:py-5">
+        <div data-reveal className="flex w-full items-center justify-between overflow-hidden rounded-[24px] bg-[#f3f6fc] px-[32px] py-[28px] max-lg:px-6 max-lg:py-5">
           <p className="w-[720px] max-w-full text-[18px] font-medium leading-[1.55] text-[#1e2a78]">
             {screen4.listLine}
           </p>

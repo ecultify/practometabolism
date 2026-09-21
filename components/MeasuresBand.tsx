@@ -33,7 +33,7 @@ export function MeasuresBand() {
         <p className="text-[clamp(2rem,3.33vw,3rem)] font-light leading-[1.1] tracking-[-0.02em] text-white">
           <TitleLines text={band.headline} at={2} dark />
         </p>
-        <p className="text-[15px] italic leading-[1.5] text-[#8fa0d9]">{band.caption}</p>
+        <p data-reveal className="text-[15px] italic leading-[1.5] text-[#8fa0d9]">{band.caption}</p>
       </div>
 
       <div
@@ -47,7 +47,7 @@ export function MeasuresBand() {
         </p>
         <ul className="flex flex-wrap content-start items-start gap-x-[22px] gap-y-[12px] max-lg:grid max-lg:w-full max-lg:grid-cols-2 max-lg:gap-x-[24px]">
           {band.measures.map((m) => (
-            <li key={m} className="flex shrink-0 flex-col gap-[6px] max-lg:w-full">
+            <li key={m} data-reveal className="flex shrink-0 flex-col gap-[6px] max-lg:w-full">
               <span className="whitespace-nowrap text-[18px] font-semibold leading-normal text-white">
                 {m}
               </span>

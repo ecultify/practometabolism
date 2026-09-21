@@ -39,8 +39,8 @@ export function TitleLines({ text, at, dark = false }: { text: string; at: numbe
   if (own) line2 = line2.slice(0, -1);
   return (
     <>
-      <span className="block">{line1}</span>
-      <span className={`block font-semibold ${dark ? 'text-[#8fe3fa]' : 'text-[#28328c]'}`}>
+      <span data-reveal className="block">{line1}</span>
+      <span data-reveal className={`block font-semibold ${dark ? 'text-[#8fe3fa]' : 'text-[#28328c]'}`}>
         {line2}
         <span className="text-[#14bef0]">{mark}</span>
       </span>

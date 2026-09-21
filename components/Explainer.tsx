@@ -82,7 +82,7 @@ export function Explainer() {
             <h2 className="text-[clamp(1.875rem,3.33vw,3rem)] font-light leading-[1.2] text-[#0b1140]">
               <TitleLines text={explainer.headline} at={5} />
             </h2>
-            <p className="text-[18px] leading-[1.6] text-[#2e3766] max-lg:text-[17px]">
+            <p data-reveal className="text-[18px] leading-[1.6] text-[#2e3766] max-lg:text-[17px]">
               {explainer.subhead}
             </p>
           </div>
