@@ -21,7 +21,7 @@
  */
 
 import { screen4 } from '@/lib/content';
-import { Txt } from './ui';
+import { TitleLines, Txt } from './ui';
 
 const BOX_W = 314;
 const BOX_H = 380;
@@ -34,7 +34,7 @@ export function Balance() {
         <div className="flex w-full items-start justify-between gap-10 max-lg:flex-col max-lg:gap-6">
           <div className="flex w-[760px] max-w-full flex-col gap-[14px]">
             <h2 className="w-full text-[clamp(2.25rem,3.89vw,3.5rem)] font-light leading-[1.1] tracking-[-0.02em] text-[#0b1140]">
-              {screen4.headline}
+              <TitleLines text={screen4.headline} at={5} />
             </h2>
           </div>
           <div className="flex w-[488px] max-w-full flex-col items-start">

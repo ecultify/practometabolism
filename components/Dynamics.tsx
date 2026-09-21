@@ -23,7 +23,7 @@
  */
 
 import { screen2, screen3 } from '@/lib/content';
-import { ArrowChip, Txt } from './ui';
+import { ArrowChip, TitleLines, Txt } from './ui';
 
 
 function Dot() {
@@ -52,7 +52,7 @@ export function Dynamics() {
           {/* ---- Screen 2 ---- */}
           <div className="flex w-full flex-col items-center gap-[14px]">
             <h2 className="w-full text-center text-[clamp(2.25rem,3.89vw,3.5rem)] font-light leading-[1.1] tracking-[-0.02em] text-white">
-              {screen2.headline}
+              <TitleLines text={screen2.headline} at={4} dark />
             </h2>
             <p className="w-full text-center text-[19px] leading-[1.6] text-[#c9d1ee] max-lg:text-[17px]">
               {screen2.subhead}
@@ -92,7 +92,7 @@ export function Dynamics() {
           {/* ---- Screen 3 ---- */}
           <div className="flex w-full flex-col items-center gap-[14px]">
             <h2 className="w-full text-center text-[clamp(1.875rem,2.92vw,2.625rem)] font-light leading-[1.25] text-white">
-              {screen3.headline}
+              <TitleLines text={screen3.headline} at={5} dark />
             </h2>
           </div>
 

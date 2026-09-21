@@ -20,7 +20,7 @@
  */
 
 import { screen5 } from '@/lib/content';
-import { Txt } from './ui';
+import { TitleLines, Txt } from './ui';
 
 const CARD =
   'flex h-full min-w-0 flex-1 flex-col items-start gap-[10px] overflow-hidden rounded-[20px] bg-white p-[28px] max-md:h-auto max-md:w-full';
@@ -36,7 +36,7 @@ export function Numbers() {
         <div className="flex w-full items-start justify-between gap-10 max-lg:flex-col max-lg:gap-6">
           <div className="flex w-[760px] max-w-full flex-col items-start gap-[14px]">
             <h2 className="w-full text-[clamp(1.875rem,3.33vw,3rem)] font-light leading-[1.1] tracking-[-0.02em] text-[#0b1140]">
-              {screen5.headline}
+              <TitleLines text={screen5.headline} at={2} />
             </h2>
           </div>
           <div className="flex w-[488px] max-w-full flex-col items-start gap-[14px] leading-[1.6]">

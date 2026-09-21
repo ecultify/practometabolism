@@ -32,7 +32,7 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { interstitial, screen9 } from '@/lib/content';
-import { ArrowChip } from './ui';
+import { ArrowChip, TitleLines } from './ui';
 
 type OptionId = 'measures' | 'habits';
 
@@ -94,8 +94,7 @@ export function NextSteps() {
               <div className="flex w-[460px] max-w-full shrink-0 flex-col items-start gap-[20px] pt-[16px] max-lg:w-full max-lg:pt-0">
                 <div className="flex w-full flex-col items-start gap-[14px]">
                   <h2 className="w-[460px] max-w-full text-[clamp(1.875rem,2.78vw,2.5rem)] font-light leading-[1.1] tracking-[-0.02em] text-white">
-                    <span className="block">Choose what you would like</span>
-                    <span className="block">to explore next</span>
+                    <TitleLines text="Choose what you would like to explore next" at={5} dark />
                   </h2>
                 </div>
                 <p className="w-[460px] max-w-full text-[13px] italic leading-[1.65] text-[#c9d1ee]">

@@ -33,7 +33,7 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { explainer } from '@/lib/content';
-import { Txt } from './ui';
+import { TitleLines, Txt } from './ui';
 
 const PILL = 'btn rounded-[999px] whitespace-nowrap';
 
@@ -80,7 +80,7 @@ export function Explainer() {
         <div className="flex w-full items-center justify-between gap-6 max-md:flex-col max-md:items-start">
           <div className="flex w-[860px] max-w-full flex-col gap-[12px]">
             <h2 className="text-[clamp(1.875rem,3.33vw,3rem)] font-light leading-[1.2] text-[#0b1140]">
-              {explainer.headline}
+              <TitleLines text={explainer.headline} at={5} />
             </h2>
             <p className="text-[18px] leading-[1.6] text-[#2e3766] max-lg:text-[17px]">
               {explainer.subhead}

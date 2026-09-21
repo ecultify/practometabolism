@@ -1,5 +1,5 @@
 import { screen1 } from '@/lib/content';
-import { ArrowChip } from './ui';
+import { ArrowChip, TitleLines } from './ui';
 
 /**
  * Screen 1 — node 2242:40.
@@ -25,12 +25,12 @@ const gridLines = Array.from({ length: 15 }, (_, i) => 40 + i * 40);
 export function Hero() {
   return (
     <section id="top" className="bg-[#F3F6FC]">
-      <div className="mx-auto flex w-full max-w-[1440px] flex-col items-stretch gap-10 px-6 pt-14 md:px-14 lg:flex-row lg:items-center lg:py-[80px]">
+      <div className="mx-auto flex w-full max-w-[1440px] flex-col items-stretch gap-10 px-6 pt-10 md:px-14 lg:flex-row lg:items-center lg:pb-[80px] lg:pt-[40px]">
         {/* ---- Copy ---- */}
         <div className="flex min-w-0 flex-1 flex-col items-start gap-7 pb-10 lg:pb-0">
 
           <h1 className="max-w-[700px] text-[clamp(2.5rem,5.56vw,5rem)] font-light leading-[1.04] tracking-[-0.025em] text-[#0B1140]">
-            {screen1.headline}
+            <TitleLines text={screen1.headline} at={3} />
           </h1>
 
           <p className="max-w-[560px] whitespace-pre-line text-[clamp(1rem,1.32vw,1.1875rem)] leading-[1.6] text-[#2E3766]">

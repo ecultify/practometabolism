@@ -27,6 +27,25 @@ export function Txt({ line, className }: { line: Line; className?: string }) {
   );
 }
 
+/* ---------- two-tone titles (doctor-headline treatment, site-wide) ----------
+   line 1 light · line 2 semibold accent · trailing . or ? in cyan */
+export function TitleLines({ text, at, dark = false }: { text: string; at: number; dark?: boolean }) {
+  const words = text.split(' ');
+  const line1 = words.slice(0, at).join(' ');
+  let line2 = words.slice(at).join(' ');
+  const mark = /[.?!]$/.test(line2) ? line2.slice(-1) : '';
+  if (mark) line2 = line2.slice(0, -1);
+  return (
+    <>
+      <span className="block">{line1}</span>
+      <span className={`block font-semibold ${dark ? 'text-[#8fe3fa]' : 'text-[#28328c]'}`}>
+        {line2}
+        {mark && <span className="text-[#14bef0]">{mark}</span>}
+      </span>
+    </>
+  );
+}
+
 /* ---------- layout ---------- */
 export function Section({
   id,

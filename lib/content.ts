@@ -304,7 +304,7 @@ export const screen6 = {
   signs: [
     { text: 'Gradual weight gain', refs: [1, 13], image: '/images/signs/clothes-jeans.webp', alt: 'Waistband of jeans fitting more tightly than before' },
     { text: 'Increasing waist circumference', refs: [13], image: '/images/signs/waist-increase.webp', alt: 'Everyday moment, no clinical framing' },
-    { text: 'Swelling around the feet or ankles', refs: [14], image: '/images/signs/ankles.webp', alt: 'Someone sitting on a bed, holding their lower leg' },
+    { text: 'Swelling around the feet or ankles', refs: [14], image: '/images/signs/ankles.webp', alt: 'Hands resting on bare feet and ankles at home' },
     { text: 'Knee joint pain', refs: [15], image: '/images/signs/knee.webp', alt: 'Someone sitting on a sofa, holding their knee' },
   ],
   otherHeading: 'Other changes people sometimes mention',

@@ -40,6 +40,7 @@
  */
 
 import { waistPanel as w } from '@/lib/content';
+import { TitleLines } from './ui';
 
 /* ---------- 2242:206 tape ruler ---------- */
 // Full-bleed: the ruler runs edge to edge on any viewport, so ticks cover 4K.
@@ -232,8 +233,7 @@ export function WaistPanel() {
             {/* Copy (2242:347) */}
             <div className="flex min-w-0 flex-1 flex-col items-start gap-[24px] self-stretch">
               <h2 className="w-full text-[clamp(2rem,3.47vw,3.125rem)] font-light leading-[1.1] tracking-[-0.02em] text-[#0b1140]">
-                <span className="block">{line1}</span>
-                <span className="block">{line2}</span>
+                <TitleLines text={`${line1} ${line2}`} at={3} />
               </h2>
 
               <p className="w-[620px] max-w-full text-[19px] leading-[1.6] text-[#2e3766] max-lg:text-[17px]">
