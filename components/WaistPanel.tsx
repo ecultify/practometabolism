@@ -231,12 +231,12 @@ export function WaistPanel() {
                 aria-hidden="true"
                 className="absolute left-0 h-[2px] w-full bg-[#14bef0]"
                 // photo is object-positioned, so the line sits on the tape band
-                // on the navel (y≈228 of the 562px source → 260 in the 640px box)
-                style={{ top: p(260, V_H) }}
+                // on the navel (y≈228 of the 562px source → 228 in the 640px box)
+                style={{ top: p(228, V_H) }}
               />
               <span
                 className="marker-label absolute flex items-center gap-[8px] overflow-hidden rounded-[999px] bg-white px-[14px] py-[8px] text-[14px] font-medium text-[#1e2a78] max-lg:text-[11px]"
-                style={{ '--marker-left': p(300, V_W), top: p(232, V_H) } as React.CSSProperties}
+                style={{ '--marker-left': p(300, V_W), top: p(200, V_H) } as React.CSSProperties}
               >
                 <span aria-hidden="true" className="block size-[8px] rounded-full bg-[#14bef0]" />
                 {w.markerLabel}
