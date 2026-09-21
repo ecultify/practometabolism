@@ -241,13 +241,13 @@ export function WaistPanel() {
               </p>
 
               {/* Steps 1 and 2 (2242:354) */}
-              <ol className="flex w-full flex-1 items-start gap-[24px] max-sm:flex-col">
+              <ol className="flex w-full flex-1 items-stretch gap-[24px] max-sm:flex-col">
                 {w.steps.slice(0, 2).map((s, i) => (
                   <li
                     key={s}
-                    className="flex h-full min-w-0 flex-1 flex-col items-start gap-[10px] rounded-[20px] bg-white p-[20px] max-sm:w-full"
+                    className="flex h-full min-w-0 flex-1 flex-col items-start gap-[10px] self-stretch rounded-[20px] bg-white p-[20px] max-sm:w-full"
                   >
-                    <div className="h-[170px] w-full overflow-hidden rounded-[12px] bg-white">
+                    <div className="min-h-[170px] w-full flex-1 overflow-hidden rounded-[12px] bg-white">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         src={stepIllus[i]}

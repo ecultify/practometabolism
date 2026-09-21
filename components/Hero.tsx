@@ -8,26 +8,26 @@ import { ArrowChip } from './ui';
  * the layout drifting from the design.
  */
 const W = 600;
-const H = 800;
+const H = 640;
 const pct = (v: number, of: number) => `${(v / of) * 100}%`;
 
 // left/top in the 600x800 frame, straight from Figma
 const readings = [
-  { label: 'Blood pressure', left: 406, top: 250 },
-  { label: 'Blood sugar', left: 427, top: 330 },
-  { label: 'Waist circumference', left: 365, top: 410 },
-  { label: 'Cholesterol', left: 431, top: 490 },
-  { label: 'Body weight', left: 425, top: 570 },
+  { label: 'Blood pressure', left: 406, top: 190 },
+  { label: 'Blood sugar', left: 427, top: 262 },
+  { label: 'Waist circumference', left: 365, top: 334 },
+  { label: 'Cholesterol', left: 431, top: 406 },
+  { label: 'Body weight', left: 425, top: 478 },
 ];
 
-const gridLines = Array.from({ length: 19 }, (_, i) => 40 + i * 40);
+const gridLines = Array.from({ length: 15 }, (_, i) => 40 + i * 40);
 
 export function Hero() {
   return (
     <section id="top" className="bg-[#F3F6FC]">
-      <div className="mx-auto flex w-full max-w-[1440px] flex-col items-stretch gap-10 px-6 pt-14 md:px-14 lg:flex-row lg:items-center lg:pt-[80px]">
+      <div className="mx-auto flex w-full max-w-[1440px] flex-col items-stretch gap-10 px-6 pt-14 md:px-14 lg:flex-row lg:items-center lg:py-[80px]">
         {/* ---- Copy ---- */}
-        <div className="flex min-w-0 flex-1 flex-col items-start gap-7 pb-10 lg:pb-[80px]">
+        <div className="flex min-w-0 flex-1 flex-col items-start gap-7 pb-10 lg:pb-0">
 
           <h1 className="max-w-[700px] text-[clamp(2.5rem,5.56vw,5rem)] font-light leading-[1.04] tracking-[-0.025em] text-[#0B1140]">
             {screen1.headline}
@@ -56,7 +56,7 @@ export function Hero() {
 
         {/* ---- Split portrait ---- */}
         <div
-          className="relative w-full shrink-0 self-end overflow-hidden rounded-t-[32px] lg:w-[600px]"
+          className="relative w-full shrink-0 overflow-hidden rounded-[32px] lg:w-[600px]"
           style={{ aspectRatio: `${W} / ${H}` }}
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}

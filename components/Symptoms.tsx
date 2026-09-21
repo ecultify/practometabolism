@@ -45,14 +45,6 @@ function Marker() {
   );
 }
 
-/* Figma 2258:57 — 8 x 18 box, 4r circle at cy 14 */
-function Dot() {
-  return (
-    <span aria-hidden="true" className="relative block h-[18px] w-[8px] shrink-0">
-      <span className="absolute left-0 top-[10px] block size-[8px] rounded-full bg-[#14bef0]" />
-    </span>
-  );
-}
 
 const quoteLayout = [
   { indent: 0, rule: 285.3 },
@@ -182,18 +174,6 @@ export function Symptoms() {
             {screen6.signs.map((s) => (
               <SignCard key={s.text} image={s.image} alt={s.alt} line={s} />
             ))}
-            <li className="flex h-[400px] min-w-0 flex-1 flex-col items-start justify-center gap-[18px] overflow-hidden rounded-[24px] bg-[#eaf8fe] px-[32px] py-[36px] max-md:h-auto max-md:w-full">
-              <ul className="flex w-full flex-col gap-[18px]">
-                {screen6.signsNoImage.map((s) => (
-                  <li key={s.text} className="flex w-full items-start gap-[14px]">
-                    <Dot />
-                    <p className="min-w-0 flex-1 text-[19px] font-medium leading-[1.5] text-[#0b1140]">
-                      <Txt line={s} />
-                    </p>
-                  </li>
-                ))}
-              </ul>
-            </li>
           </ul>
 
           <h3 className={HEAD}>{screen6.otherHeading}</h3>
