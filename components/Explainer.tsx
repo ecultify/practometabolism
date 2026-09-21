@@ -124,7 +124,7 @@ export function Explainer() {
                 style={{ order: i * 2 }}
                 className={`${PILL} px-[22px] py-[11px] text-[15px] font-medium leading-[1.55] max-md:w-full max-md:text-left ${
                   i === active
-                    ? 'bg-[#28328c] text-white max-md:rounded-b-none'
+                    ? 'bg-[#28328c] text-white max-md:rounded-[24px] max-md:rounded-b-none'
                     : 'bg-white text-[#28328c] max-md:mb-[12px]'
                 }`}
               >
