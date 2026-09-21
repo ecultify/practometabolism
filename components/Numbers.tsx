@@ -35,9 +35,6 @@ export function Numbers() {
         {/* ---- Intro row (2242:416) ---- */}
         <div className="flex w-full items-start justify-between gap-10 max-lg:flex-col max-lg:gap-6">
           <div className="flex w-[760px] max-w-full flex-col items-start gap-[14px]">
-            <p className="whitespace-nowrap text-[13px] font-semibold leading-[1.4] tracking-[1.04px] text-[#28328c]">
-              {screen5.eyebrow}
-            </p>
             <h2 className="w-full text-[clamp(1.875rem,3.33vw,3rem)] font-light leading-[1.1] tracking-[-0.02em] text-[#0b1140]">
               {screen5.headline}
             </h2>

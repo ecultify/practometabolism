@@ -40,9 +40,6 @@ export function Balance() {
         {/* ---- Intro (2242:618) ---- */}
         <div className="flex w-full items-start justify-between gap-10 max-lg:flex-col max-lg:gap-6">
           <div className="flex w-[760px] max-w-full flex-col gap-[14px]">
-            <p className="whitespace-nowrap text-[13px] font-semibold leading-[1.4] tracking-[1.04px] text-[#28328c]">
-              {screen4.eyebrow}
-            </p>
             <h2 className="w-full text-[clamp(2.25rem,3.89vw,3.5rem)] font-light leading-[1.1] tracking-[-0.02em] text-[#0b1140]">
               {screen4.headline}
             </h2>

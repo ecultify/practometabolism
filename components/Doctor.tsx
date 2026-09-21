@@ -93,9 +93,6 @@ export function Doctor() {
         {/* ---- Copy (2242:583) ---- */}
         <div className="flex min-w-0 flex-1 flex-col items-start gap-[20px]">
           <div className="flex w-full flex-col items-start gap-[14px]">
-            <p className="whitespace-nowrap text-[13px] font-semibold leading-[1.4] tracking-[1.04px] text-[#28328c]">
-              {screen8.eyebrow}
-            </p>
             <h2 className="w-full text-[clamp(2rem,3.61vw,3.25rem)] font-light leading-[1.1] tracking-[-0.02em] text-[#0b1140]">
               <span className="block">When is it worth</span>
               <span className="block font-semibold text-[#28328c]">

@@ -25,8 +25,6 @@
 import { screen2, screen3 } from '@/lib/content';
 import { ArrowChip, Txt } from './ui';
 
-const EYEBROW =
-  'w-full text-center text-[13px] font-semibold leading-[1.4] tracking-[1.04px] text-[#8fe3fa]';
 
 function Dot() {
   return (
@@ -53,7 +51,6 @@ export function Dynamics() {
         <div className="relative flex flex-col items-center gap-[72px] px-[56px] py-[120px] max-lg:gap-12 max-lg:px-6 max-lg:py-20">
           {/* ---- Screen 2 ---- */}
           <div className="flex w-full flex-col items-center gap-[14px]">
-            <p className={EYEBROW}>{screen2.eyebrow}</p>
             <h2 className="w-full text-center text-[clamp(2.25rem,3.89vw,3.5rem)] font-light leading-[1.1] tracking-[-0.02em] text-white">
               {screen2.headline}
             </h2>
@@ -62,11 +59,11 @@ export function Dynamics() {
             </p>
           </div>
 
-          <div className="flex h-[188px] w-full items-start gap-[24px] overflow-hidden rounded-[28px] border border-solid border-[rgba(255,255,255,0.12)] max-md:h-auto max-md:flex-col max-md:rounded-none max-md:border-0">
+          <div className="flex h-[188px] w-full items-start gap-[24px] max-md:h-auto max-md:flex-col">
             {screen2.cards.map((c) => (
               <div
                 key={c.title}
-                className="flex h-full min-w-0 flex-1 flex-col items-start gap-[14px] overflow-hidden rounded-[22px] bg-[#131a4d] p-[28px] max-md:h-auto max-md:w-full max-md:border max-md:border-solid max-md:border-[rgba(255,255,255,0.12)]"
+                className="flex h-full min-w-0 flex-1 flex-col items-start gap-[14px] overflow-hidden rounded-[28px] border border-solid border-[rgba(255,255,255,0.12)] bg-[#131a4d] p-[28px] max-md:h-auto max-md:w-full"
               >
                 <p className="w-full text-[18px] font-semibold leading-[1.5] text-white">
                   {c.title}
@@ -94,7 +91,6 @@ export function Dynamics() {
 
           {/* ---- Screen 3 ---- */}
           <div className="flex w-full flex-col items-center gap-[14px]">
-            <p className={EYEBROW}>{screen3.eyebrow}</p>
             <h2 className="w-full text-center text-[clamp(1.875rem,2.92vw,2.625rem)] font-light leading-[1.25] text-white">
               {screen3.headline}
             </h2>

@@ -24,12 +24,11 @@ export function MeasuresBand() {
   return (
     <section
       data-node-id="2242:95"
-      aria-label={`${band.eyebrow} ${band.headline}`}
+      aria-label={band.headline}
       className="bg-[#0b1140]"
     >
       <div className="mx-auto flex w-full max-w-[1440px] items-center gap-[48px] px-[56px] py-[40px] max-lg:flex-col max-lg:items-start max-lg:gap-[28px] max-lg:px-6 max-lg:py-8">
       <div className="flex w-[560px] max-w-full shrink-0 flex-col gap-[8px]">
-        <p className="text-[14px] font-medium leading-normal text-[#8fa0d9]">{band.eyebrow}</p>
         <p className="text-[clamp(2rem,3.33vw,3rem)] font-light leading-[1.1] tracking-[-0.02em] text-white">
           {band.headline}
         </p>

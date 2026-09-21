@@ -460,6 +460,52 @@ export const screen7 = {
   imageNote: 'Image: no illustration needed. The tool is the content on this screen.',
 };
 
+export const tool = {
+  steps: [
+    { title: 'Your routine', body: 'Six quick yes/no questions' },
+    {
+      title: 'Numbers you have',
+      body: 'All fields are optional. Fill this in only if you have a recent report at hand. The summary works either way.',
+    },
+    { title: 'Your summary', body: 'A short summary to take to your doctor.' },
+  ],
+  yes: 'Yes',
+  no: 'No',
+  questions: [
+    { id: 'sleep', text: 'Do you usually get less than 7 hours of sleep?', restate: 'You usually sleep less than 7 hours.', ask: 'Could my sleep be affecting my health numbers?' },
+    { id: 'sitting', text: 'Are most of your days spent mostly sitting?', restate: 'Most of your days are spent sitting.', ask: 'What kind of activity would suit my routine?' },
+    { id: 'eatout', text: 'Do you eat out or order in more than three times a week?', restate: 'You eat out or order in more than three times a week.', ask: 'Is there anything in my routine I should change first?' },
+    { id: 'family', text: 'Has anyone in your immediate family had diabetes, high blood pressure or heart disease?', restate: 'Diabetes, high blood pressure or heart disease runs in your immediate family.', ask: 'Given my family history, which measures are relevant for me?' },
+    { id: 'check', text: 'Has it been more than a year since your last health check?', restate: 'It has been more than a year since your last health check.', ask: 'Which of these checks have I already had?' },
+    { id: 'waist', text: 'Have your clothes been getting tighter around the waist?', restate: 'Your clothes have been getting tighter around the waist.', ask: 'How should I be measuring my waist circumference?' },
+  ],
+  fields: [
+    { id: 'hba1c', label: 'HbA1c', unit: '%', placeholder: '5.6', ref: 'below 5.7%', limit: 5.7, ask: 'How often should I check my HbA1c?' },
+    { id: 'glucose', label: 'Fasting blood sugar', unit: 'mg/dL', placeholder: '95', ref: 'below 100', limit: 100, ask: 'What do my blood sugar numbers mean for my age?' },
+    { id: 'bp', label: 'Blood pressure', unit: 'mmHg', placeholder: '120/80', ref: 'below 120/80', limit: [120, 80] as const, ask: 'Is my blood pressure something to keep an eye on?' },
+    { id: 'chol', label: 'Total cholesterol', unit: 'mg/dL', placeholder: '180', ref: 'below 200', limit: 200, ask: 'Should I have a full lipid profile done?' },
+  ],
+  worth: 'Worth mentioning',
+  refPrefix: 'ref.',
+  nextNumbers: 'Next: Numbers you have',
+  backRoutine: 'Back to your routine',
+  createSummary: 'Create my summary',
+  startAgain: 'Start again',
+  optionalNote: 'Every field is optional. No name, contact or identity is collected.',
+  optionalSub: 'No score, no percentage, no risk band, no colour rating. “Worth mentioning” is a prompt to raise it with a doctor, not a verdict.',
+  summary: {
+    heading: 'Your summary',
+    body: 'A short summary to take to your doctor.',
+    toldUs: 'What you told us',
+    numbers: 'Numbers you entered',
+    asking: 'Questions worth asking',
+    empty: 'Your summary appears here as you answer the questions.',
+    nothing: 'Nothing you told us stood out.',
+    ready: 'Your summary is ready.',
+    readyBody: 'It is in the panel alongside. Nothing has been saved or sent anywhere.',
+  },
+};
+
 export const screen8 = {
   eyebrow: 'When to talk to a doctor',
   headline: 'When is it worth speaking to a doctor?',
