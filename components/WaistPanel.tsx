@@ -188,7 +188,7 @@ export function WaistPanel() {
     <section data-node-id="2242:205" className="flex flex-col items-start bg-[#eaf8fe]">
       <TapeRuler />
       <div className="mx-auto w-full max-w-[1440px]">
-        <div className="flex w-full flex-col items-start gap-[24px] px-[56px] pb-[112px] pt-[96px] max-lg:gap-5 max-lg:px-6 max-lg:pb-16 max-lg:pt-14">
+        <div className="flex w-full flex-col items-start gap-[24px] px-[56px] py-[80px] max-lg:gap-5 max-lg:px-6 max-lg:py-14">
           {/* ---- Bento row 1 (2242:339) ---- */}
           <div className="flex w-full items-start gap-[24px] max-lg:flex-col">
             {/* Visual (2242:340) */}
@@ -227,20 +227,6 @@ export function WaistPanel() {
                   className="h-full w-full object-cover"
                 />
               </div>
-              <span
-                aria-hidden="true"
-                className="absolute left-0 h-[2px] w-full bg-[#14bef0]"
-                // photo is object-positioned, so the line sits on the tape band
-                // on the navel (y≈228 of the 562px source → 244 in the 640px box)
-                style={{ top: p(244, V_H) }}
-              />
-              <span
-                className="marker-label absolute flex items-center gap-[8px] overflow-hidden rounded-[999px] bg-white px-[14px] py-[8px] text-[14px] font-medium text-[#1e2a78] max-lg:text-[11px]"
-                style={{ '--marker-left': p(300, V_W), top: p(216, V_H) } as React.CSSProperties}
-              >
-                <span aria-hidden="true" className="block size-[8px] rounded-full bg-[#14bef0]" />
-                {w.markerLabel}
-              </span>
             </div>
 
             {/* Copy (2242:347) */}
@@ -253,19 +239,6 @@ export function WaistPanel() {
               <p className="w-[620px] max-w-full text-[19px] leading-[1.6] text-[#2e3766] max-lg:text-[17px]">
                 {w.disclaimer}
               </p>
-
-              {/* Before you start (2242:350) */}
-              <div className="flex w-full items-center gap-[14px] overflow-hidden rounded-[16px] bg-white px-[20px] py-[16px]">
-                <span
-                  aria-hidden="true"
-                  className="flex size-[26px] shrink-0 items-center justify-center rounded-[999px] bg-[#28328c] text-[14px] font-bold text-white"
-                >
-                  i
-                </span>
-                <p className="min-w-0 flex-1 text-[16px] font-medium leading-[1.5] text-[#1e2a78]">
-                  {w.beforeYouStart}
-                </p>
-              </div>
 
               {/* Steps 1 and 2 (2242:354) */}
               <ol className="flex w-full flex-1 items-start gap-[24px] max-sm:flex-col">

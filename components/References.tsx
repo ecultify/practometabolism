@@ -36,7 +36,7 @@ function RefColumn({ items }: { items: typeof references }) {
 export function References() {
   return (
     <section id="references" aria-labelledby="references-heading" className="scroll-mt-24 bg-[#f3f6fc]">
-      <div className="mx-auto flex w-full max-w-[1440px] flex-col items-start gap-[18px] px-[56px] py-[64px] max-lg:px-6 max-lg:py-12">
+      <div className="mx-auto flex w-full max-w-[1440px] flex-col items-start gap-[18px] px-[56px] py-[80px] max-lg:px-6 max-lg:py-14">
         <h2
           id="references-heading"
           className="whitespace-nowrap text-[14px] font-semibold leading-[1.4] tracking-[0.84px] text-[#0b1140]"

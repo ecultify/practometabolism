@@ -74,7 +74,7 @@ export function AssessmentTool() {
 
   return (
     <section id="check" data-node-id="2242:462" className="scroll-mt-24 bg-[#f3f6fc]">
-      <div className="mx-auto flex w-full max-w-[1440px] flex-col items-center gap-[28px] px-[56px] py-[120px] max-lg:gap-6 max-lg:px-6 max-lg:py-20">
+      <div className="mx-auto flex w-full max-w-[1440px] flex-col items-center gap-[28px] px-[56px] py-[80px] max-lg:gap-6 max-lg:px-6 max-lg:py-14">
         <div className="flex w-full flex-col items-center gap-[14px]">
           <h2 className="w-[900px] max-w-full text-center text-[clamp(2.25rem,3.89vw,3.5rem)] font-light leading-[1.1] tracking-[-0.02em] text-[#0b1140]">
             {t.headline}

@@ -75,7 +75,7 @@ export function Explainer() {
       data-node-id="2244:29"
       className="scroll-mt-24 bg-[#f3f6fc]"
     >
-      <div className="mx-auto flex w-full max-w-[1440px] flex-col items-start gap-[32px] px-[56px] py-[110px] max-lg:px-6 max-lg:py-16">
+      <div className="mx-auto flex w-full max-w-[1440px] flex-col items-start gap-[32px] px-[56px] py-[80px] max-lg:px-6 max-lg:py-14">
         {/* ---- Head (2244:30) ---- */}
         <div className="flex w-full items-center justify-between gap-6 max-md:flex-col max-md:items-start">
           <div className="flex w-[860px] max-w-full flex-col gap-[12px]">

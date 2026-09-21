@@ -53,7 +53,7 @@ function Check() {
 export function Doctor() {
   return (
     <section id="doctor" data-node-id="2242:562" className="scroll-mt-24 bg-white">
-      <div className="mx-auto flex w-full max-w-[1440px] items-center gap-[64px] px-[56px] py-[120px] max-lg:flex-col max-lg:items-stretch max-lg:gap-10 max-lg:px-6 max-lg:py-20">
+      <div className="mx-auto flex w-full max-w-[1440px] items-center gap-[64px] px-[56px] py-[80px] max-lg:flex-col max-lg:items-stretch max-lg:gap-10 max-lg:px-6 max-lg:py-14">
         {/* ---- Left (2242:563) ---- */}
         <div className="flex w-[640px] max-w-full shrink-0 flex-col items-start gap-[24px] max-lg:w-full">
           <div

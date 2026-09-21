@@ -48,7 +48,7 @@ export function Dynamics() {
       }}
     >
       <div className="relative mx-auto w-full max-w-[1440px]">
-        <div className="relative flex flex-col items-center gap-[72px] px-[56px] py-[120px] max-lg:gap-12 max-lg:px-6 max-lg:py-20">
+        <div className="relative flex flex-col items-center gap-[72px] px-[56px] py-[80px] max-lg:gap-12 max-lg:px-6 max-lg:py-14">
           {/* ---- Screen 2 ---- */}
           <div className="flex w-full flex-col items-center gap-[14px]">
             <h2 className="w-full text-center text-[clamp(2.25rem,3.89vw,3.5rem)] font-light leading-[1.1] tracking-[-0.02em] text-white">

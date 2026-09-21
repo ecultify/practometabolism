@@ -88,7 +88,7 @@ export function NextSteps() {
       >
         <div className="relative mx-auto w-full max-w-[1440px]">
 
-          <div className="relative flex flex-col items-start gap-[72px] px-[56px] pb-[120px] pt-[140px] max-lg:gap-12 max-lg:px-6 max-lg:pb-20 max-lg:pt-24">
+          <div className="relative flex flex-col items-start gap-[72px] px-[56px] py-[80px] max-lg:gap-12 max-lg:px-6 max-lg:py-14">
             {/* ---- Main (2242:648) ---- */}
             <div className="flex w-full items-start gap-[80px] max-lg:flex-col max-lg:gap-10">
               <div className="flex w-[460px] max-w-full shrink-0 flex-col items-start gap-[20px] pt-[16px] max-lg:w-full max-lg:pt-0">

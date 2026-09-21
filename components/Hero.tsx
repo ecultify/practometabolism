@@ -25,9 +25,9 @@ const gridLines = Array.from({ length: 19 }, (_, i) => 40 + i * 40);
 export function Hero() {
   return (
     <section id="top" className="bg-[#F3F6FC]">
-      <div className="mx-auto flex w-full max-w-[1440px] flex-col items-stretch gap-10 px-6 pt-14 md:px-14 lg:flex-row lg:items-end lg:pt-[72px]">
+      <div className="mx-auto flex w-full max-w-[1440px] flex-col items-stretch gap-10 px-6 pt-14 md:px-14 lg:flex-row lg:items-center lg:pt-[80px]">
         {/* ---- Copy ---- */}
-        <div className="flex min-w-0 flex-1 flex-col items-start gap-7 pb-10 lg:pb-[72px]">
+        <div className="flex min-w-0 flex-1 flex-col items-start gap-7 pb-10 lg:pb-[80px]">
 
           <h1 className="max-w-[700px] text-[clamp(2.5rem,5.56vw,5rem)] font-light leading-[1.04] tracking-[-0.025em] text-[#0B1140]">
             {screen1.headline}

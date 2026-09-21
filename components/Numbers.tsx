@@ -31,7 +31,7 @@ export function Numbers() {
 
   return (
     <section id="numbers" data-node-id="2242:415" className="scroll-mt-24 bg-[#f3f6fc]">
-      <div className="mx-auto flex w-full max-w-[1440px] flex-col items-start gap-[48px] px-[56px] py-[120px] max-lg:gap-10 max-lg:px-6 max-lg:py-20">
+      <div className="mx-auto flex w-full max-w-[1440px] flex-col items-start gap-[48px] px-[56px] py-[80px] max-lg:gap-10 max-lg:px-6 max-lg:py-14">
         {/* ---- Intro row (2242:416) ---- */}
         <div className="flex w-full items-start justify-between gap-10 max-lg:flex-col max-lg:gap-6">
           <div className="flex w-[760px] max-w-full flex-col items-start gap-[14px]">

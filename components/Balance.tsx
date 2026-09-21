@@ -25,18 +25,11 @@ import { Txt } from './ui';
 
 const BOX_W = 314;
 const BOX_H = 380;
-const pct = (v: number, of: number) => `${(v / of) * 100}%`;
-
-const mosaic = [
-  { key: 'bowl', left: 0, top: 0, w: 314, h: 250, r: 24 },
-  { key: 'salad', left: 0, top: 262, w: 151, h: 118, r: 18 },
-  { key: 'meal', left: 163, top: 262, w: 151, h: 118, r: 18 },
-];
 
 export function Balance() {
   return (
     <section id="balance" data-node-id="2242:617" className="scroll-mt-24 bg-white">
-      <div className="mx-auto flex w-full max-w-[1440px] flex-col items-start gap-[64px] px-[56px] py-[120px] max-lg:gap-12 max-lg:px-6 max-lg:py-20">
+      <div className="mx-auto flex w-full max-w-[1440px] flex-col items-start gap-[64px] px-[56px] py-[80px] max-lg:gap-12 max-lg:px-6 max-lg:py-14">
         {/* ---- Intro (2242:618) ---- */}
         <div className="flex w-full items-start justify-between gap-10 max-lg:flex-col max-lg:gap-6">
           <div className="flex w-[760px] max-w-full flex-col gap-[14px]">
@@ -55,42 +48,13 @@ export function Balance() {
         <ul className="flex w-full items-start gap-[24px] max-lg:grid max-lg:grid-cols-2 max-sm:grid-cols-1">
           {screen4.cards.map((c) => (
             <li key={c.title} className="flex min-w-0 flex-1 flex-col items-start gap-[16px] max-lg:gap-[8px]">
-              {'mosaic' in c && c.mosaic ? (
-                <div
-                  className="relative w-full overflow-hidden"
-                  style={{ aspectRatio: `${BOX_W} / ${BOX_H}` }}
-                >
-                  {mosaic.map((m, i) => (
-                    <div
-                      key={m.key}
-                      className="absolute overflow-hidden bg-[#F3F6FC]"
-                      style={{
-                        left: pct(m.left, BOX_W),
-                        top: pct(m.top, BOX_H),
-                        width: pct(m.w, BOX_W),
-                        height: pct(m.h, BOX_H),
-                        borderRadius: `${m.r}px`,
-                      }}
-                    >
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
-                        src={(c.mosaic as string[])[i]}
-                        alt={i === 0 ? c.alt : ''}
-                        loading="lazy"
-                        decoding="async"
-                        className="h-full w-full object-cover"
-                      />
-                    </div>
-                  ))}
-                </div>
-              ) : (
-                <div
+              <div
                   className="w-full overflow-hidden rounded-[24px] bg-[#F3F6FC]"
                   style={{ aspectRatio: `${BOX_W} / ${BOX_H}` }}
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src={c.image}
+                    src={'mosaic' in c && c.mosaic ? (c.mosaic as string[])[0] : c.image}
                     alt={c.alt}
                     loading="lazy"
                     decoding="async"
@@ -98,7 +62,6 @@ export function Balance() {
                     style={c.image.includes('stress') ? { objectPosition: '72% 30%' } : undefined}
                   />
                 </div>
-              )}
               <h3 className="whitespace-nowrap text-[24px] font-semibold tracking-[-0.005em] text-[#0b1140] max-lg:whitespace-normal">
                 {c.title}
               </h3>

@@ -87,7 +87,7 @@ function SignCard({
       </div>
       <div className="flex w-full items-start gap-[12px]">
         <Marker />
-        <p className="w-[270px] max-w-full text-[19px] font-medium leading-[1.45] text-[#0b1140]">
+        <p className="min-w-0 flex-1 text-[19px] font-medium leading-[1.45] text-[#0b1140]">
           <Txt line={line} />
         </p>
       </div>
@@ -98,7 +98,7 @@ function SignCard({
 export function Symptoms() {
   return (
     <section data-node-id="2242:120" className="scroll-mt-24 bg-white">
-      <div className="mx-auto flex w-full max-w-[1440px] flex-col items-start gap-[72px] px-[56px] py-[120px] max-lg:gap-14 max-lg:px-6 max-lg:py-20">
+      <div className="mx-auto flex w-full max-w-[1440px] flex-col items-start gap-[72px] px-[56px] py-[80px] max-lg:gap-14 max-lg:px-6 max-lg:py-14">
         {/* ---- Excuses (2242:121) ---- */}
         <div className="flex w-full items-start gap-[56px] max-lg:flex-col max-lg:gap-10">
           <div className="flex min-w-0 max-w-full flex-1 flex-col items-start gap-[20px] max-lg:w-full">
