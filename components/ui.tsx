@@ -33,14 +33,16 @@ export function TitleLines({ text, at, dark = false }: { text: string; at: numbe
   const words = text.split(' ');
   const line1 = words.slice(0, at).join(' ');
   let line2 = words.slice(at).join(' ');
-  const mark = /[.?!]$/.test(line2) ? line2.slice(-1) : '';
-  if (mark) line2 = line2.slice(0, -1);
+  // every title ends on the cyan mark: keep the copy's own . or ?, otherwise add a full stop
+  const own = /[.?!]$/.test(line2);
+  const mark = own ? line2.slice(-1) : '.';
+  if (own) line2 = line2.slice(0, -1);
   return (
     <>
       <span className="block">{line1}</span>
       <span className={`block font-semibold ${dark ? 'text-[#8fe3fa]' : 'text-[#28328c]'}`}>
         {line2}
-        {mark && <span className="text-[#14bef0]">{mark}</span>}
+        <span className="text-[#14bef0]">{mark}</span>
       </span>
     </>
   );
