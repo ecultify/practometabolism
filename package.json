@@ -7,7 +7,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "next build && rsync -az --delete out/ root@187.126.113.212:/var/www/practo/"
   },
   "dependencies": {
     "@fontsource/poppins": "^5.3.0",
