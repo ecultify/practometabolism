@@ -1,12 +1,11 @@
 import type { Metadata } from 'next';
 // Self-hosted so the build needs no network and the site has no third-party
 // font request at runtime (relevant for a health page with a privacy line).
-import '@fontsource/poppins/300.css';
-import '@fontsource/poppins/400.css';
-import '@fontsource/poppins/500.css';
-import '@fontsource/poppins/600.css';
-import '@fontsource/poppins/700.css';
-import '@fontsource/poppins/400-italic.css';
+import '@fontsource/lato/300.css';
+import '@fontsource/lato/400.css';
+import '@fontsource/lato/700.css';
+import '@fontsource/lato/400-italic.css';
+import '@fontsource/lato/700-italic.css';
 import './globals.css';
 import { MotionInit } from '@/components/MotionInit';
 

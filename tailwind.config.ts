@@ -44,7 +44,7 @@ const config: Config = {
         pill: 'var(--btn-radius)',
       },
       fontFamily: {
-        sans: ['var(--font-poppins)', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-sans)', 'Helvetica', 'Arial', 'sans-serif'],
       },
       fontSize: {
         // name -> [size, line-height] straight off the Figma type ramp

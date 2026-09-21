@@ -23,14 +23,14 @@ import { screen5 } from '@/lib/content';
 import { Txt } from './ui';
 
 const CARD =
-  'flex h-full min-w-0 flex-1 flex-col items-start gap-[10px] overflow-hidden rounded-[20px] bg-[#f3f6fc] p-[28px] max-md:h-auto max-md:w-full';
+  'flex h-full min-w-0 flex-1 flex-col items-start gap-[10px] overflow-hidden rounded-[20px] bg-white p-[28px] max-md:h-auto max-md:w-full';
 
 export function Numbers() {
   const row1 = screen5.measures.slice(0, 3);
   const row2 = screen5.measures.slice(3);
 
   return (
-    <section id="numbers" data-node-id="2242:415" className="scroll-mt-24 bg-white">
+    <section id="numbers" data-node-id="2242:415" className="scroll-mt-24 bg-[#f3f6fc]">
       <div className="mx-auto flex w-full max-w-[1440px] flex-col items-start gap-[48px] px-[56px] py-[120px] max-lg:gap-10 max-lg:px-6 max-lg:py-20">
         {/* ---- Intro row (2242:416) ---- */}
         <div className="flex w-full items-start justify-between gap-10 max-lg:flex-col max-lg:gap-6">
@@ -78,8 +78,8 @@ export function Numbers() {
 
         {/* ---- Footnote row (2242:456) ---- */}
         <div className="flex h-[82px] w-full flex-col items-center justify-between gap-3 max-lg:h-auto">
-          <div className="flex w-full flex-col items-start overflow-hidden rounded-[16px] bg-[#f3f6fc] px-[22px] py-[20px]">
-            <p className="w-full text-[13px] leading-[1.65] text-[#4a5487]">{screen5.closing}</p>
+          <div className="flex w-full flex-col items-center justify-center overflow-hidden rounded-[16px] bg-white px-[22px] py-[20px]">
+            <p className="w-full text-center text-[13px] leading-[1.65] text-[#4a5487]">{screen5.closing}</p>
           </div>
           <p className="w-full text-[12px] italic leading-[1.5] text-[#6b75a8]">{screen5.note}</p>
         </div>
