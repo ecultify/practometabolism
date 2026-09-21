@@ -2,7 +2,7 @@
 
 /**
  * Pixel-matched to Figma node 2244:29
- * ("01A Understand your metabolism (hidden section)").
+ * ("01A Understand your internal health (hidden section)").
  *
  * The Figma frame shows all four panels stacked so every state can be
  * reviewed at once. The design note on that frame ("Inside are four tabs,

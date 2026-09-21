@@ -16,7 +16,7 @@ export interface Line {
 export const nav = {
   brand: 'Practo',
   links: [
-    { label: 'Metabolic health', href: '#understand' },
+    { label: 'Internal health', href: '#understand' },
     { label: 'Your health dynamics', href: '#dynamics' },
     { label: 'Health in balance', href: '#balance' },
     { label: 'Your health numbers', href: '#numbers' },
@@ -25,10 +25,10 @@ export const nav = {
 };
 
 export const screen1 = {
-  eyebrow: 'Metabolic health awareness',
+  eyebrow: 'Internal health awareness',
   headline: 'Health starts with you.',
   subhead:
-    'Underneath the everyday things, like what you eat, how you move and how you sleep, your body is always managing sugar, fat and energy. That’s what we mean by metabolic health. It isn’t one test or one number. It’s all of these working together.',
+    'Underneath the everyday things, like what you eat, how you move and how you sleep, your body is always managing sugar, fat and energy. That is what we mean by internal health. It is not one test or one number. It is all of these working together.',
   primaryCta: 'Know More',
   secondaryCta: 'Take the risk assessment',
   readings: [
@@ -38,11 +38,11 @@ export const screen1 = {
     'Cholesterol',
     'Body weight',
   ],
-  note: '[Know More] opens the Understand Your Metabolism section below. [Take the risk assessment] scrolls to Screen 7.',
+  note: '[Know More] opens the Understand Your Internal Health section below. [Take the risk assessment] scrolls to Screen 7.',
 };
 
 export const band = {
-  eyebrow: 'Metabolic health covers',
+  eyebrow: 'Internal health covers',
   headline: 'Five measures',
   caption: 'No single one tells the whole story',
   listLabel: 'What it includes',
@@ -56,8 +56,8 @@ export const band = {
 };
 
 export const explainer = {
-  headline: 'Understand your metabolism',
-  subhead: 'What metabolic health is, what it includes, and why it matters. A 2-minute read.',
+  headline: 'Understand your internal health',
+  subhead: 'What internal health is, what it includes, and why it matters. A 2-minute read.',
   openLabel: 'Read +',
   closeLabel: 'Close –',
   closeExplainer: 'Close explainer',
@@ -67,12 +67,12 @@ export const explainer = {
   tabs: [
     {
       id: 'what',
-      label: '1. What is metabolic health?',
+      label: '1. What is internal health?',
       blocks: [
         {
           kind: 'body' as const,
           line: {
-            text: 'Metabolic health is how well your body handles the sugar, fat and energy it gets from food, day to day. It is an umbrella term. It isn’t one condition and it isn’t one number. Several everyday health measures together help show the picture.',
+            text: 'Internal health is how well your body handles the sugar, fat and energy it gets from food, day to day. It is an umbrella term. It is not one condition and it is not one number. Several everyday health measures together help show the picture.',
             refs: [1],
           },
         },
@@ -93,7 +93,7 @@ export const explainer = {
             { text: 'Waist circumference, which shows where the body stores fat' },
           ],
         },
-        { kind: 'subhead' as const, line: { text: 'Doesn’t mean' } },
+        { kind: 'subhead' as const, line: { text: 'Does not mean' } },
         {
           kind: 'list' as const,
           items: [
@@ -110,7 +110,7 @@ export const explainer = {
     },
     {
       id: 'benefits',
-      label: '3. Benefits of good metabolic health',
+      label: '3. Benefits of good internal health',
       blocks: [
         { kind: 'body' as const, line: { text: 'When these measures stay in a healthy range, it is linked with:' } },
         {
@@ -127,7 +127,7 @@ export const explainer = {
       id: 'downstream',
       label: '4. Downstream effects',
       blocks: [
-        { kind: 'subhead' as const, line: { text: 'If metabolic health isn’t in good shape' } },
+        { kind: 'subhead' as const, line: { text: 'If internal health is not in good shape' } },
         { kind: 'body' as const, line: { text: 'Over time, it can influence the risk of:' } },
         {
           kind: 'list' as const,
@@ -150,19 +150,19 @@ export const explainer = {
 };
 
 export const screen2 = {
-  eyebrow: 'Metabolic health matters',
+  eyebrow: 'Internal health matters',
   headline: 'Take a closer look at your health',
   subhead: 'Looking beyond weight to overall wellbeing.',
   cards: [
     {
-      title: 'Benefits: good metabolic health is linked with',
+      title: 'Benefits: good internal health is linked with',
       items: [
         { text: 'A lower long-term risk of type 2 diabetes', refs: [1] },
         { text: 'A lower long-term risk of heart and blood vessel disease', refs: [1] },
       ],
     },
     {
-      title: 'Downstream effects: poor metabolic health can influence the risk of',
+      title: 'Downstream effects: poor internal health can influence the risk of',
       items: [
         { text: 'Type 2 diabetes', refs: [1] },
         { text: 'Heart and blood vessel disease, and other related conditions', refs: [1, 3] },
@@ -189,7 +189,7 @@ export const screen3 = {
     {
       title: 'Where fat is stored',
       body: {
-        text: 'Fat can also build up inside organs, even in people who aren’t overweight. That’s one reason weight is only one part of the picture.',
+        text: 'Fat can also build up inside organs, even in people who are not overweight. That is one reason weight is only one part of the picture.',
         refs: [2],
       },
       image: '/images/illustrations/fat-around-organs.webp',
@@ -200,7 +200,7 @@ export const screen3 = {
 };
 
 export const screen4 = {
-  eyebrow: 'What shapes metabolic health',
+  eyebrow: 'What shapes internal health',
   headline: 'Health in balance',
   subhead: 'Support your health with nutrition, activity, sleep, and regular checks.',
   cards: [
@@ -229,14 +229,14 @@ export const screen4 = {
       alt: 'A home-cooked meal with vegetables, pulses and grains',
     },
     {
-      title: 'Don’t ignore stress',
-      body: { text: 'Long-term stress has been linked with changes in metabolic health.', refs: [10] },
+      title: 'Do not ignore stress',
+      body: { text: 'Long-term stress has been linked with changes in internal health.', refs: [10] },
       image: '/images/habits/stress.webp',
       alt: 'A person pausing at a desk during a long day',
     },
   ],
   listLine: 'Other things that play a part: Family history · Age · Body weight',
-  note: 'Image: normal life — someone walking after dinner, a regular home-cooked meal, someone putting their phone away before bed. Don’t make it look like a fitness campaign.',
+  note: 'Image: normal life — someone walking after dinner, a regular home-cooked meal, someone putting their phone away before bed. Do not make it look like a fitness campaign.',
 };
 
 export const screen5 = {
@@ -252,7 +252,7 @@ export const screen5 = {
     { title: 'Body size — Weight & BMI', body: { text: 'A useful measure, best understood alongside the others.' } },
   ],
   closing:
-    'These are some of the measures that may be relevant to understanding metabolic health. A doctor can explain which ones matter for you and what your own numbers mean.',
+    'These are some of the measures that may be relevant to understanding internal health. A doctor can explain which ones matter for you and what your own numbers mean.',
   note: 'Image: keep this one clean. Five simple cards, no stock images. A very simple illustration of where the tape goes inside the panel: no “good” versus “bad” waist, no colours indicating risk.',
 };
 
@@ -260,9 +260,9 @@ export const waistPanel = {
   heading: 'How waist circumference is measured',
   optional: 'Optional · collapsed panel',
   disclaimer:
-    'This is a general guide, not a diagnosis. A waist circumference measurement alone can’t tell you whether you have a health problem.',
+    'This is a general guide, not a diagnosis. A waist circumference measurement alone cannot tell you whether you have a health problem.',
   steps: [
-    'Stand normally and breathe out. Don’t pull your stomach in.',
+    'Stand normally and breathe out. Do not pull your stomach in.',
     'Place the tape around your waist at roughly navel level, against the skin.',
     'Note the number. A doctor can help you understand it alongside your other measures.',
   ],
@@ -273,7 +273,7 @@ export const waistPanel = {
     'Optional panel. Collapsed by default, it opens from the Know your health numbers section above.',
   ruleTitle: 'A simple rule of thumb',
   ruleBody:
-    'Waist size should ideally be less than half your height. But don\u2019t read too much into one number. It\u2019s simply something useful to know and, if needed, discuss with a doctor along with things like blood sugar, cholesterol and blood pressure.',
+    'Waist size should ideally be less than half your height. But do not read too much into one number. It is simply something useful to know and, if needed, discuss with a doctor along with things like blood sugar, cholesterol and blood pressure.',
   ruleGlyph: '\u00bd',
   footnote:
     'Image: a very simple illustration of where the tape goes: no \u201cgood\u201d versus \u201cbad\u201d waist, no colours indicating risk.',
@@ -293,9 +293,9 @@ export const screen6 = {
   headline: 'Understand the symptoms',
   subhead: 'Some changes are easy to put down to a busy life.',
   quotes: [
-    '“It’s just a busy phase.”',
-    '“I haven’t been sleeping well.”',
-    '“Maybe I’m just getting older.”',
+    '“It is just a busy phase.”',
+    '“I have not been sleeping well.”',
+    '“Maybe I am just getting older.”',
   ],
   // Feature collage, Figma node 2242:138
   collage: [
@@ -317,7 +317,7 @@ export const screen6 = {
     { text: 'Breathlessness during routine activities', refs: [12], image: '/images/signs/stairs.webp', alt: 'Someone partway up a flight of stairs' },
   ],
   closing: {
-    text: 'These changes can happen for many different reasons and don’t necessarily mean there is a metabolic problem. If they persist or can’t be explained, it may be worth discussing them with a healthcare professional.',
+    text: 'These changes can happen for many different reasons and do not necessarily mean there is an underlying problem. If they persist or cannot be explained, it may be worth discussing them with a healthcare professional.',
     refs: [11, 14],
   },
   note: 'Image: everyday moments rather than “symptoms”: someone halfway up a staircase, a pair of shoes by the door. Nothing medical, nothing dramatic.',
@@ -328,17 +328,17 @@ export const screen7 = {
   headline: 'Check what matters',
   subhead: 'Know your key health measures and discuss them with a doctor.',
   body: 'This short self-assessment has eight questions and takes about 2 minutes. Nothing is saved or sent anywhere.',
-  heading: 'Metabolic health check · 8 questions · about 2 minutes · no sign-in',
+  heading: 'Internal health check · 8 questions · about 2 minutes · no sign-in',
   disclaimer:
     'This screening tool is for health awareness and educational purposes only and does not promote any specific product, treatment, or brand. Your results are indicative only and do NOT constitute a medical diagnosis. This tool does not diagnose, treat, cure, mitigate, or prevent any disease or condition. Always consult a qualified healthcare professional for proper evaluation and diagnosis before making any health-related decisions. © 2026 Practo Technologies Private Limited.',
   intro: [
     {
       title: 'What this tool is for',
-      body: 'Showing which everyday factors are linked with metabolic health, and what you could talk about with a doctor.',
+      body: 'Showing which everyday factors are linked with internal health, and what you could talk about with a doctor.',
     },
     {
-      title: 'What it doesn’t do',
-      body: 'It gives no diagnosis, score or risk rating, and it can’t tell you whether you have a health condition.',
+      title: 'What it does not do',
+      body: 'It gives no diagnosis, score or risk rating, and it cannot tell you whether you have a health condition.',
     },
     {
       title: 'How your answers are handled',
@@ -452,7 +452,7 @@ export const screen7 = {
     balance: { label: 'Health in balance', href: '#balance' },
     dynamics: { label: 'Your health dynamics', href: '#dynamics' },
     numbers: { label: 'Every number tells a story', href: '#numbers' },
-    understand: { label: 'Understand your metabolism', href: '#understand' },
+    understand: { label: 'Understand your internal health', href: '#understand' },
   },
   note: 'Note: show one question at a time with a progress bar (“1 of 8”). Everything runs on the page; nothing is stored or logged. Only the total number of completions is counted. The summary links only to sections on this page.',
   imageNote: 'Image: no illustration needed. The tool is the content on this screen.',
@@ -461,9 +461,9 @@ export const screen7 = {
 export const screen8 = {
   eyebrow: 'When to talk to a doctor',
   headline: 'When is it worth speaking to a doctor?',
-  intro: 'You don’t need to wait until something feels seriously wrong. It may be worth a conversation if:',
+  intro: 'You do not need to wait until something feels seriously wrong. It may be worth a conversation if:',
   list: [
-    'Changes like the ones above don’t settle, or you can’t explain them',
+    'Changes like the ones above do not settle, or you cannot explain them',
     'Diabetes, high blood pressure or heart disease runs in your immediate family',
     'A doctor has told you before that your blood sugar, cholesterol or blood pressure was high',
   ],
@@ -475,15 +475,15 @@ export const screen8 = {
     '“Is there anything in my routine I should change first?”',
   ],
   urgent:
-    'Don’t wait for a routine visit if breathlessness is sudden or severe, or comes with chest pain, fainting or severe discomfort. Seek urgent medical care.',
+    'Do not wait for a routine visit if breathlessness is sudden or severe, or comes with chest pain, fainting or severe discomfort. Seek urgent medical care.',
   image: '/images/doctor/consultation.webp',
   imageAlt: 'A doctor and a patient sitting at the same eye level, having a conversation',
-  note: 'Image: a doctor and a person having an actual conversation. Both sitting down, same eye level, relaxed. It should look like someone asking questions, not like they’ve just been given bad news.',
+  note: 'Image: a doctor and a person having an actual conversation. Both sitting down, same eye level, relaxed. It should look like someone asking questions, not like they have just been given bad news.',
 };
 
 export const screen9 = {
   eyebrow: 'Learn your next steps',
-  headline: 'Choose what you’d like to explore next',
+  headline: 'Choose what you would like to explore next',
   note: 'Both buttons open the interstitial below before going to the Practo page.',
   cta: 'Learn Your Next Steps',
   // Figma node 2242:682 — pull quote under the two options
@@ -492,26 +492,26 @@ export const screen9 = {
   options: [
     {
       id: 'measures' as const,
-      title: 'I’d like to understand my health measures',
+      title: 'I would like to understand my health measures',
       body: 'A conversation about blood sugar, cholesterol, blood pressure, body weight and waist circumference, and what they mean for you.',
     },
     {
       id: 'habits' as const,
-      title: 'I’d like guidance on everyday habits',
+      title: 'I would like guidance on everyday habits',
       body: 'Guidance on nutrition, physical activity, sleep and other everyday routines.',
     },
   ],
 };
 
 export const interstitial = {
-  headline: 'You’re leaving this health information page',
+  headline: 'You are leaving this health information page',
   labels: {
     measures: 'Option 1: Learn Your Next Steps · Understanding your health measures',
     habits: 'Option 2: Learn Your Next Steps · Guidance on everyday habits',
   },
   bodies: {
-    measures: 'You’ll now go to a page on practo.com, where you can speak with a doctor about your health measures.',
-    habits: 'You’ll now go to a page on practo.com, where you can get guidance on nutrition, activity and everyday habits.',
+    measures: 'You will now go to a page on practo.com, where you can speak with a doctor about your health measures.',
+    habits: 'You will now go to a page on practo.com, where you can get guidance on nutrition, activity and everyday habits.',
   },
   instruction: 'Select “Continue to Practo” to go ahead, or “Stay on this page” to go back.',
   stay: 'Stay on this page',

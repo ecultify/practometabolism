@@ -96,7 +96,7 @@ export function NextSteps() {
                   {screen9.eyebrow}
                 </p>
                 <h2 className="w-[460px] max-w-full text-[clamp(1.875rem,2.78vw,2.5rem)] font-light leading-[1.1] tracking-[-0.02em] text-white">
-                  <span className="block">Choose what you’d like</span>
+                  <span className="block">Choose what you would like</span>
                   <span className="block">to explore next</span>
                 </h2>
                 <p className="w-[460px] max-w-full text-[13px] italic leading-[1.65] text-[#c9d1ee]">

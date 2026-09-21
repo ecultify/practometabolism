@@ -11,14 +11,14 @@ import './globals.css';
 import { MotionInit } from '@/components/MotionInit';
 
 export const metadata: Metadata = {
-  title: 'Metabolic health awareness | Practo',
+  title: 'Internal health awareness | Practo',
   description:
-    'Health starts with you. Understand the everyday measures that shape your metabolic health: blood sugar, cholesterol, blood pressure, body weight and waist circumference.',
+    'Health starts with you. Understand the everyday measures that shape your internal health: blood sugar, cholesterol, blood pressure, body weight and waist circumference.',
   robots: { index: true, follow: true },
   openGraph: {
     title: 'Health starts with you | Practo',
     description:
-      'Understand the everyday measures that shape your metabolic health, and what is worth discussing with a doctor.',
+      'Understand the everyday measures that shape your internal health, and what is worth discussing with a doctor.',
     type: 'website',
   },
 };
