@@ -65,6 +65,15 @@ export function MotionInit() {
         },
       });
 
+      /* ---- tape ruler slides with the scroll: down moves it left, up moves it right ---- */
+      const tape = document.querySelector<HTMLElement>('[data-tape]');
+      if (tape) {
+        gsap.fromTo(tape, { x: 1200 }, {
+          x: 0, ease: 'none',
+          scrollTrigger: { trigger: tape.parentElement, start: 'top bottom', end: 'bottom top', scrub: 0.6 },
+        });
+      }
+
       /* ---- underlines (CSS transition, just flagged in and out of view) ---- */
       const rules = below('.rule-draw');
       rules.forEach((el, i) => {

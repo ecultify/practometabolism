@@ -29,7 +29,7 @@ export function Txt({ line, className }: { line: Line; className?: string }) {
 
 /* ---------- two-tone titles (doctor-headline treatment, site-wide) ----------
    line 1 light · line 2 semibold accent · trailing . or ? in cyan */
-export function TitleLines({ text, at, dark = false }: { text: string; at: number; dark?: boolean }) {
+export function TitleLines({ text, at, dark = false, inline = false }: { text: string; at: number; dark?: boolean; inline?: boolean }) {
   const words = text.split(' ');
   const line1 = words.slice(0, at).join(' ');
   let line2 = words.slice(at).join(' ');
@@ -39,8 +39,8 @@ export function TitleLines({ text, at, dark = false }: { text: string; at: numbe
   if (own) line2 = line2.slice(0, -1);
   return (
     <>
-      <span data-reveal className="block">{line1}</span>
-      <span data-reveal className={`block font-semibold ${dark ? 'text-[#8fe3fa]' : 'text-[#28328c]'}`}>
+      <span data-reveal className={inline ? 'inline' : 'block'}>{line1}{inline ? ' ' : ''}</span>
+      <span data-reveal className={`${inline ? 'inline' : 'block'} font-semibold ${dark ? 'text-[#8fe3fa]' : 'text-[#28328c]'}`}>
         {line2}
         <span className="text-[#14bef0]">{mark}</span>
       </span>

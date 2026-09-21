@@ -44,7 +44,7 @@ import { TitleLines } from './ui';
 
 /* ---------- 2242:206 tape ruler ---------- */
 // Full-bleed: the ruler runs edge to edge on any viewport, so ticks cover 4K.
-const RULER_W = 3840;
+const RULER_W = 3840 + 1200; // 1200px of slack so the tape can slide 1200px with scroll
 const ticks = Array.from({ length: Math.floor(RULER_W / 12) }, (_, i) => i * 12);
 
 function TapeRuler() {
@@ -54,6 +54,7 @@ function TapeRuler() {
       data-node-id="2242:206"
       className="relative h-[56px] w-full select-none overflow-hidden bg-white"
     >
+      <div data-tape className="absolute left-[-1200px] top-0 h-full" style={{ width: RULER_W }}>
       {ticks.map((x) => {
         const major = x % 120 === 0;
         const mid = !major && x % 60 === 0;
@@ -80,6 +81,7 @@ function TapeRuler() {
             {x / 12}
           </span>
         ))}
+      </div>
     </div>
   );
 }
