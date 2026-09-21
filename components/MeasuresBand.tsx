@@ -45,15 +45,15 @@ export function MeasuresBand() {
         <p className="whitespace-nowrap text-[14px] font-medium leading-normal text-[#8fa0d9]">
           {band.listLabel}
         </p>
-        <ul className="flex flex-wrap content-start items-start gap-x-[22px] gap-y-[12px]">
+        <ul className="flex flex-wrap content-start items-start gap-x-[22px] gap-y-[12px] max-lg:grid max-lg:w-full max-lg:grid-cols-2 max-lg:gap-x-[24px]">
           {band.measures.map((m) => (
-            <li key={m} className="flex shrink-0 flex-col gap-[6px]">
+            <li key={m} className="flex shrink-0 flex-col gap-[6px] max-lg:w-full">
               <span className="whitespace-nowrap text-[18px] font-semibold leading-normal text-white">
                 {m}
               </span>
               <span
                 aria-hidden="true"
-                className="rule-draw block h-[4px] w-[120px] rounded-[2px]"
+                className="rule-draw block h-[4px] w-[120px] rounded-[2px] max-lg:w-full"
                 style={{ backgroundImage: RULE }}
               />
             </li>

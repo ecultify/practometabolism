@@ -187,7 +187,7 @@ export function Symptoms() {
 
         {/* ---- Closing line (2242:166) ---- */}
         <div className="flex w-full items-center justify-between overflow-hidden border-t border-solid border-[#e4e8f4] pt-[36px]">
-          <p className="w-[760px] max-w-full text-[20px] leading-[1.6] text-[#2e3766] max-lg:text-[18px]">
+          <p className="w-full text-[20px] leading-[1.6] text-[#2e3766] max-lg:text-[18px]">
             <Txt line={screen6.closing} />
           </p>
         </div>

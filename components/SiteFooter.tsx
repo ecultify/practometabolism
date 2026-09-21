@@ -16,7 +16,7 @@ export function SiteFooter() {
   return (
     <footer data-node-id="2242:683" className="bg-[#070b2e]">
       <div className="mx-auto flex w-full max-w-[1440px] flex-col items-start gap-[28px] px-[56px] py-[48px] max-lg:px-6">
-        <p className="w-[1200px] max-w-full text-[13px] leading-[1.7] text-[#8a93bd]">
+        <p className="w-full text-[13px] leading-[1.7] text-[#8a93bd]">
           {footer.disclaimer}
         </p>
 
@@ -38,7 +38,7 @@ export function SiteFooter() {
           </p>
         </div>
 
-        <p className="w-[1200px] max-w-full text-[13px] font-semibold leading-[1.7] text-[#8a93bd]">
+        <p className="w-full text-[13px] font-semibold leading-[1.7] text-[#8a93bd]">
           {footer.copyright}
         </p>
       </div>
