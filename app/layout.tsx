@@ -8,6 +8,10 @@ import '@fontsource/lato/400-italic.css';
 import '@fontsource/lato/700-italic.css';
 import './globals.css';
 import { MotionInit } from '@/components/MotionInit';
+import { GoogleAnalytics } from '@next/third-parties/google';
+
+// Set NEXT_PUBLIC_GA_ID in .env.local (build time). Without it no analytics tag is emitted.
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 
 export const metadata: Metadata = {
   title: 'Internal health awareness | Practo',
@@ -35,6 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
         <MotionInit />
       </body>
+      {GA_ID && <GoogleAnalytics gaId={GA_ID} />}
     </html>
   );
 }
