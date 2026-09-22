@@ -19,7 +19,6 @@ import { useMemo, useRef, useState } from 'react';
 import { screen7 as t, tool } from '@/lib/content';
 import { ArrowChip, TitleLines } from './ui';
 
-type YesNo = 'yes' | 'no';
 
 const PRIMARY =
   'btn btn-primary flex shrink-0 items-center gap-[14px] overflow-hidden rounded-[999px] bg-[#28328c] py-[10px] pl-[22px] pr-[10px] text-[17px] font-semibold leading-[1.55] text-white';
@@ -42,13 +41,14 @@ function flag(id: string, raw: string): boolean | null {
 
 export function AssessmentTool() {
   const [step, setStep] = useState(0);
-  const [answers, setAnswers] = useState<Record<string, YesNo>>({});
+  const [answers, setAnswers] = useState<Record<string, string>>({});
   const [numbers, setNumbers] = useState<Record<string, string>>({});
   const summaryRef = useRef<HTMLDivElement>(null);
 
-  const total = tool.questions.length;
-  const answered = tool.questions.filter((q) => answers[q.id]).length;
-  const current = tool.questions.findIndex((q) => !answers[q.id]);
+  const questions = t.questions;
+  const total = questions.length;
+  const answered = questions.filter((q) => answers[q.id]).length;
+  const current = questions.findIndex((q) => !answers[q.id]);
 
   const go = (i: number) => {
     setStep(i);
@@ -62,12 +62,16 @@ export function AssessmentTool() {
   const restart = () => { setAnswers({}); setNumbers({}); setStep(0); };
 
   const summary = useMemo(() => {
-    const told = tool.questions.filter((q) => answers[q.id] === 'yes');
+    // every answered question is restated; doctor questions come from the options the script flags
+    const picked = questions
+      .map((q) => ({ q, opt: q.options.find((o) => o.value === answers[q.id]) }))
+      .filter((x): x is { q: (typeof questions)[number]; opt: (typeof questions)[number]['options'][number] } => Boolean(x.opt));
+    const told = picked.map(({ q, opt }) => ({ id: q.id, restate: opt.restate }));
     const entered = tool.fields
       .filter((f) => numbers[f.id]?.trim())
       .map((f) => ({ ...f, value: numbers[f.id].trim(), worth: flag(f.id, numbers[f.id]) === true }));
     const asks: string[] = [];
-    told.forEach((q) => asks.push(q.ask));
+    picked.forEach(({ q, opt }) => { if (opt.flags?.length) asks.push(q.doctorQuestion); });
     entered.forEach((f) => { if (f.worth) asks.push(f.ask); });
     return { told, entered, asks: asks.slice(0, 4), any: answered > 0 || entered.length > 0 };
   }, [answers, numbers, answered]);
@@ -149,23 +153,26 @@ export function AssessmentTool() {
                   </div>
 
                   <ul className="flex w-full flex-col">
-                    {tool.questions.map((q, i) => {
+                    {questions.map((q, i) => {
                       const isCurrent = i === current;
                       const upcoming = current !== -1 && i > current;
+                      // long option sets go on their own row under the question
+                      const wide = q.options.reduce((n, o) => n + o.label.length, 0) > 40;
                       return (
                         <li
                           key={q.id}
-                          className={`flex w-full items-center justify-between gap-[24px] border-b border-solid border-[#e4e8f4] py-[14px] transition-opacity max-sm:flex-col max-sm:items-start max-sm:gap-[10px] ${
+                          className={`flex w-full items-center justify-between gap-[24px] border-b border-solid border-[#e4e8f4] py-[14px] transition-opacity max-md:flex-col max-md:items-start max-md:gap-[10px] ${wide ? '!flex-col !items-start !justify-start gap-[10px]' : ''} ${
                             isCurrent ? '-mx-[12px] w-[calc(100%+24px)] rounded-[12px] border-transparent bg-[#f3f6fc] px-[12px]' : ''
                           } ${upcoming ? 'opacity-60' : ''}`}
                         >
-                          <p className="min-w-0 flex-1 text-[15px] font-medium leading-[1.5] text-[#0b1140]">{q.text}</p>
+                          <p className="min-w-0 flex-1 text-[15px] font-medium leading-[1.5] text-[#0b1140] max-md:w-full">{q.question}</p>
                           <div
                             role="radiogroup"
-                            aria-label={q.text}
-                            className={`flex shrink-0 items-center gap-[4px] rounded-[999px] p-[4px] ${isCurrent ? 'bg-white' : 'bg-[#f3f6fc]'}`}
+                            aria-label={q.question}
+                            className={`flex shrink-0 flex-wrap items-center gap-[4px] rounded-[999px] p-[4px] max-md:rounded-[16px] ${wide ? 'max-w-full' : 'justify-end max-md:justify-start'} ${isCurrent ? 'bg-white' : 'bg-[#f3f6fc]'}`}
                           >
-                            {(['yes', 'no'] as const).map((v) => {
+                            {q.options.map((o) => {
+                              const v = o.value;
                               const active = answers[q.id] === v;
                               return (
                                 <button
@@ -178,7 +185,7 @@ export function AssessmentTool() {
                                     active ? 'bg-[#28328c] text-white' : 'text-[#28328c] hover:bg-white'
                                   }`}
                                 >
-                                  {v === 'yes' ? tool.yes : tool.no}
+                                  {o.label}
                                 </button>
                               );
                             })}

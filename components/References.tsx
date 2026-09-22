@@ -18,15 +18,7 @@ function RefColumn({ items }: { items: typeof references }) {
           id={`ref-${r.n}`}
           className="w-full scroll-mt-28 text-[12px] leading-[1.6] text-[#4a5487]"
         >
-          {r.n}. {r.text}{' '}
-          <a
-            href={r.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="break-all text-[#28328c] underline-offset-2 hover:underline"
-          >
-            {r.url}
-          </a>
+          {r.n}. {r.text}
         </p>
       ))}
     </div>
