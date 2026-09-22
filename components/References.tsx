@@ -2,12 +2,12 @@
  * References — was inside the footer (Figma 2242:683); now its own light
  * section between Screen 9 and the footer so the citations read as page
  * content rather than legal small print. Same two-column split (1 to 8,
- * then 9 to 15), same gaps, light palette.
+ * then the rest), same gaps, light palette.
  */
 
 import { footer, references } from '@/lib/content';
 
-const SPLIT = 8;
+const SPLIT = Math.ceil(references.length / 2);
 
 function RefColumn({ items }: { items: typeof references }) {
   return (

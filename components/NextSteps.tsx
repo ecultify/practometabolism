@@ -32,7 +32,7 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { interstitial, screen9 } from '@/lib/content';
-import { ArrowChip, TitleLines } from './ui';
+import { ArrowChip, TitleLines, Txt } from './ui';
 
 type OptionId = 'measures' | 'habits';
 
@@ -138,7 +138,7 @@ export function NextSteps() {
                 “
               </span>
               <p className="min-w-0 flex-1 text-[26px] italic leading-[1.5] text-white max-lg:text-[20px]">
-                {screen9.quote}
+                <Txt line={screen9.quote} />
               </p>
             </div>
           </div>

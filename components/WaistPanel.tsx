@@ -40,7 +40,7 @@
  */
 
 import { waistPanel as w } from '@/lib/content';
-import { TitleLines } from './ui';
+import { TitleLines, Txt } from './ui';
 
 /* ---------- 2242:206 tape ruler ---------- */
 // Full-bleed: the ruler runs edge to edge on any viewport, so ticks cover 4K.
@@ -301,7 +301,7 @@ export function WaistPanel() {
                 <p className="whitespace-nowrap text-[18px] font-semibold text-white">
                   {w.ruleTitle}
                 </p>
-                <p className="w-full text-[15px] leading-[1.6] text-[#d5dcf5]">{w.ruleBody}</p>
+                <p className="w-full text-[15px] leading-[1.6] text-[#d5dcf5]"><Txt line={w.ruleBody} /></p>
               </div>
             </div>
           </div>
