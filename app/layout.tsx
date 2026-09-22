@@ -8,10 +8,9 @@ import '@fontsource/lato/400-italic.css';
 import '@fontsource/lato/700-italic.css';
 import './globals.css';
 import { MotionInit } from '@/components/MotionInit';
-import { GoogleAnalytics } from '@next/third-parties/google';
 
-// Set NEXT_PUBLIC_GA_ID in .env.local (build time). Without it no analytics tag is emitted.
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+// Google Tag Manager. GA4 is fired by the container; nothing else analytics-related lives in this codebase.
+const GTM_ID = 'GTM-NMP5FCZ9';
 
 export const metadata: Metadata = {
   title: 'Internal health awareness | Practo',
@@ -29,7 +28,26 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en-IN">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','${GTM_ID}');`,
+          }}
+        />
+      </head>
       <body className="font-sans antialiased">
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-pill focus:bg-brand focus:px-5 focus:py-3 focus:text-white"
@@ -39,7 +57,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
         <MotionInit />
       </body>
-      {GA_ID && <GoogleAnalytics gaId={GA_ID} />}
     </html>
   );
 }
